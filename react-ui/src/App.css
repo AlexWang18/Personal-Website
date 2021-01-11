@@ -1,3 +1,4 @@
+
 h2 {
     color: brown;
     padding-top: 3px;
@@ -8,7 +9,7 @@ h2 {
     color: blue;
     text-align: center;
 }
-.tab{
+.headerbuttons{
     text-align: right;
 }
 h3 {
