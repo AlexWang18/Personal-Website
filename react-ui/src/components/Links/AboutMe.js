@@ -3,7 +3,8 @@ import React from 'react'
 const Body = () => {
     return (
         <div>
-            <p>hello i am alex and programming is pretty ok</p>
+            <p>Hello I'm Alex Wang, </p>
+            <i class = "china flag"></i> <i class = "us flag"></i>
         </div>
     )
 }

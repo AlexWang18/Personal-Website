@@ -1,0 +1,22 @@
+{
+  "name": "personal-backend",
+  "version": "0.0.1",
+  "description": "using express and heroku and mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest --verbose --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "alexwang18"
+  },
+  "keywords": [
+    "yee"
+  ],
+  "author": "alexw",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}

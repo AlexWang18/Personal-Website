@@ -1,6 +1,8 @@
 
 h2 {
-    color: brown;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    color: lavender;
     padding-top: 3px;
     padding-right: 3px;
     text-align: right;
