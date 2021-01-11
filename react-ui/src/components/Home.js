@@ -8,8 +8,8 @@ const Details = (props) => {
         <>
             <h3>Alex Wang</h3>
             <h3 className = "intro">Student Developer</h3>
-            <h3>Resume</h3>
-            <button onClick={props.handleResume}>Click to view</button>
+            {/* <h3>Resume</h3> */}
+            {/* <button onClick={props.handleResume}>Click to view</button> */}
             <h3>Technical Skills</h3>
             <ul>
                 {texts.map((text, i) => (

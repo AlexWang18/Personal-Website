@@ -1,11 +1,20 @@
 import axios from 'axios'
 
-const baseUrl = 'http://localhost:3001/contact'
+const baseUrl = 'http://localhost:3002/contact/api'
 
 const contactSubmit = (userObj) => {
-    axios.post(baseUrl, userObj)
-        .then(response => response.data)
-        .catch(err => console.log(err))
+    const request = axios.post(baseUrl, userObj)
+        
+    return request.then(response => {
+            return response.data
+    })
+    .catch(err => console.log(err))
 }
 
-export { contactSubmit, }
+/* const create = async (userObj) => {
+    const request = await axios.post(baseUrl, userObj)
+    console.log(request)
+    return request.data
+} */
+
+export default { contactSubmit, }
