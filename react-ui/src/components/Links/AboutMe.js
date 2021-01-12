@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import { Container, Header, List, Divider, Button, Icon } from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react'
+import { Container, Header, List, Divider, Button, Icon, Grid } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 const texts = [
     'Java', 'Python', 'HTML/CSS/JS', 'React', 'Node.js'
 ]
-
+const pdfLink = 'Alex Wang Resume.docx.pdf'
 const Body = () => {
     //const [showResume, setToShowResume] = useState(false)
 
@@ -16,25 +16,32 @@ const Body = () => {
             I am looking for a Software Engineering based internship position in 2021 which will enable me to continue to further my technical and soft skills
             and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking.
             </p>
+            <Container textAlign = "left">
             <Header as='h2' floated='left'>Skills</Header>
             <div>
                 <List animated floated='left' verticalAlign='bottom'>
                     {texts.map(t => <List.Item>{t}</List.Item>)}
                 </List>
-
-                <Button animated = 'vertical'>
-                    <Button.Content visible> 
-                        <Link target={"_blank"} to="Alex Wang Resume.docx.pdf"><Icon name = 'angle down' />For more check out my resume</Link>
-                       
+            
+                <Button floated = 'left' animated='vertical'>
+                    <Button.Content visible>
+                        <Link target={"_blank"} to={pdfLink} onClick={
+                            (event) => { console.log('clicked');  event.preventDefault(); window.open(pdfLink) }}>
+                            <Icon name='angle down' />For more check out my resume
+                        </Link>
                     </Button.Content>
                 </Button>
-               {/*   {{showResume} ? <PDF/> : null} probaly should link to pdf better way sep resources */}
+                <a className = "resume" style={{display: "table-cell"}} href={pdfLink} target="_blank">Here</a>
             </div>
+            </Container>
 
             <Divider section />
             <div>
+                <Grid>
                 <Header floated='left' as='h2'>Current Goals</Header>
+                <Grid.Row></Grid.Row>
                 <List animated floated='left' items={['Continue to get better at programming', 'Bench 200 Pounds', 'Finish this website and deploy it in a week']} />
+                </Grid>
             </div>
 
         </Container >
