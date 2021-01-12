@@ -60,6 +60,9 @@ const Info = () => {
             />
             <p>Other ways to connect</p>
             <p className="email">Email: alw245@pitt.edu</p>
+            {/* <Button color='twitter'>
+      <Icon name='twitter' /> Twitter
+    </Button> */}
             <a rel="noopener noreferrer" href="http://twitter.com/notPaff" target="_blank"><img width="90" height="90" src="Twitter_Logo_WhiteOnBlue.png" alt="twitter"></img></a>
             <br></br>
             <a rel="noopener noreferrer" href="https://github.com/AlexWang18" target="_blank"><img width="90" height="90" src="GitHub-Mark-64px.png" alt="twitter"></img></a>

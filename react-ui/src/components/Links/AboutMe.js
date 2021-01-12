@@ -1,25 +1,13 @@
 import React, {useState} from 'react'
 import { Container, Header, List, Divider, Button, Icon } from 'semantic-ui-react'
-
+import {Link} from 'react-router-dom'
 const texts = [
     'Java', 'Python', 'HTML/CSS/JS', 'React', 'Node.js'
 ]
 
-const PDF = () => {
-    return (
-        <iframe
-            title = "aw resume" src="Alex Wang Resume.docx.pdf" width="100%" height="500px">
-        </iframe>
-    )
-}
-
 const Body = () => {
-    const [showResume, setToShowResume] = useState(false)
+    //const [showResume, setToShowResume] = useState(false)
 
-    const handleClick = (e) => {
-        e.preventDefault()
-        setToShowResume(true)
-    }
     return (
         <Container textAlign='center'>
             <Header as='h2' textAlign='center'>About Me</Header>
@@ -34,8 +22,11 @@ const Body = () => {
                     {texts.map(t => <List.Item>{t}</List.Item>)}
                 </List>
 
-                <Button animated = 'vertical' onClick={handleClick}>
-                    <Button.Content visible> <Icon name = 'angle down' /> For more check out my resume </Button.Content>
+                <Button animated = 'vertical'>
+                    <Button.Content visible> 
+                        <Link target={"_blank"} to="Alex Wang Resume.docx.pdf"><Icon name = 'angle down' />For more check out my resume</Link>
+                       
+                    </Button.Content>
                 </Button>
                {/*   {{showResume} ? <PDF/> : null} probaly should link to pdf better way sep resources */}
             </div>
