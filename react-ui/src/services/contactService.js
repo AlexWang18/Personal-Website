@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const baseUrl = 'http://localhost:3002/contact/api'
 
-const contactSubmit = (userObj) => {
+const contactSubmit = (userObj) => { //forms
     const request = axios.post(baseUrl, userObj)
         
     return request.then(response => {
