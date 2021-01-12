@@ -1,12 +1,16 @@
 {
-  "name": "personalportfolio",
+  "name": "alexwang-portfolio",
   "version": "0.1.0",
-  "homepage":"./",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "anix": "^0.3.3",
+    "axios": "^0.21.1",
     "jquery": "^3.2.1",
+    "manager": "^1.0.9",
     "particles-bg": "^2.3.12",
+    "proton-engine": "^4.2.1",
+    "raf": "^3.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-ga": "^2.3.5",

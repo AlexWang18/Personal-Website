@@ -11,9 +11,14 @@ const formSchema = new mongoose.Schema({
         minlength: 2,
         required: true
     },
+    subject: {
+        type: String,
+        minlength: 1,
+        required: false
+    },
     message: {
         type: String,
-        required: false
+        required: true
     }
 })
 
