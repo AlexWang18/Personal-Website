@@ -1,32 +1,59 @@
+import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+import $ from 'jquery';
 import './App.css';
-import 'semantic-ui-css/semantic.min.css'
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import ReactDOM from 'react-dom'
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import About from './Components/About';
+import Resume from './Components/Resume';
+import Contact from './Components/Contact';
+import Portfolio from './Components/Portfolio';
 
-import Home from './components/Home'
-import {Body} from './components/Links/AboutMe'
-import Portfolio from './components/Links/Portfolio'
-import Contact from './components/Links/Contact'
-import NavBar from './components/NavBar'
+class App extends Component {
 
-function App() {
-  //states
-  return (
-    <Router>
-    <h2>alex wang</h2>
-      <div>
-        <nav>
-          <NavBar />
-        </nav>
+  constructor(props){
+    super(props);
+    this.state = {
+      foo: 'bar',
+      resumeData: {}
+    };
+
+    ReactGA.initialize('UA-110570651-1');
+    ReactGA.pageview(window.location.pathname);
+
+  }
+
+  getResumeData(){
+    $.ajax({
+      url:'./resumeData.json',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        this.setState({resumeData: data});
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
+
+  componentDidMount(){
+    this.getResumeData();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header data={this.state.resumeData.main}/>
+        <About data={this.state.resumeData.main}/>
+        <Resume data={this.state.resumeData.resume}/>
+        <Portfolio data={this.state.resumeData.portfolio}/>
+        <Contact data={this.state.resumeData.main}/>
+        <Footer data={this.state.resumeData.main}/>
       </div>
-      <Route name = "home" exact path = "/" component = {Home}/>
-      <Route name = "About Me" exact path = "/aboutme" component = {Body}/>
-      <Route name = "Portfolio" exact path = "/portfolio" component = {Portfolio} />
-      <Route home = "Contact" exact path = "/contact" component = {Contact} />
-      {/* <Details /> */}
-    </Router>
-  )
+    );
+  }
 }
 
 export default App;
