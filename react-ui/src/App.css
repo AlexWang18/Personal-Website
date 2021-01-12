@@ -8,18 +8,26 @@ h2 {
     text-align: right;
 }
 .intro{
-    color: blue;
+    color:rebeccapurple;
     text-align: center;
 }
 .headerbuttons{
     text-align: right;
 }
-h3 {
-    color: g
+h4 {
+    color: rebeccapurple;
+    margin:0;
+    padding:0;
+}
+h6 {
+    margin:0;
+    padding:0;
 }
 ul {
     color: black;
 }
 body {
+    margin:0;
+    padding:0;
     background-color: white
 }

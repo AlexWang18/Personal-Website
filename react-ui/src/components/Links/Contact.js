@@ -2,6 +2,18 @@ import React, { useState } from 'react' //is it good practice to useState outsid
 import { Link } from 'react-router-dom'
 
 import apiServices from '../../services/contactService'
+/* <List>
+    <List.Item icon='users' content='Semantic UI' />
+    <List.Item icon='marker' content='New York, NY' />
+    <List.Item
+      icon='mail'
+      content={<a href='mailto:jack@semantic-ui.com'>jack@semantic-ui.com</a>}
+    />
+    <List.Item
+      icon='linkify'
+      content={<a href='http://www.semantic-ui.com'>semantic-ui.com</a>}
+    />
+  </List> */
 
 const Info = () => {
     const [newName, setName] = useState('')
@@ -64,7 +76,7 @@ const Form = (props) => {
                 <input type="text" className="form-control" id="name" value={props.name} onChange={props.onNameChange} />
             </div>
             <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Email address</label>
+                <label htmlFor="exampleInputEmail1">Email</label>
                 <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={props.email} onChange={props.onEmailChange} />
             </div>
             <div className="form-group">
