@@ -30,7 +30,7 @@
       },
       {
         "name":"instagram",
-        "url":"http://instagram.com/alewxwng",
+        "url":"http://instagram.com/alexwng",
         "className":"fa fa-instagram"
       },
       {
@@ -41,7 +41,7 @@
     ]
   },
   "resume":{
-    "skillmessage":"Learning is something I am passionate about.",
+    "skillmessage":"I love learning and always am willing to try something new",
     "education":[
       {
         "school":"Univsersity of Pittsburgh?",
@@ -68,7 +68,7 @@
       },
       {
         "name":"JS/HTML/CSS",
-        "level":"50%"
+        "level":"45%"
       },
       {
         "name":"Python",
@@ -93,6 +93,18 @@
         "category":"",
         "image":"cave.jpg",
         "url":"https://github.com/AlexWang18/Phonebook"
+      },
+      {
+        "title":"Twitter Bot",
+        "category":"",
+        "image":"Twitter_Logo_WhiteOnBlue.png",
+        "url":"https://github.com/AlexWang18/Phonebook"
+      },
+      {
+        "title":"To be seen",
+        "category":"",
+        "image":"external-content.duckduckgo.com.jpg",
+        "url":""
       }
       
     ]

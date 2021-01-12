@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
@@ -9,6 +9,47 @@ import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Portfolio from './Components/Portfolio';
 
+import {getResume} from './services/serverServices'
+
+const App2 = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  const [resumeData, setData] = useState(null)
+  useEffect(() => {
+    setIsMounted(true)
+    const data = getResume().then(data=>data)
+    setData(data)
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      setIsMounted(false);
+      const data = getResume().then(data=>data)
+      setData(data)
+    }
+  }, []);
+  
+
+
+  ReactGA.initialize('UA-110570651-1');
+  ReactGA.pageview(window.location.pathname);
+
+  console.log(resumeData)
+  if(isMounted){
+    return (
+    
+      <div className="App">
+        <Header data={resumeData.main}/>
+        <About data={resumeData.main}/>
+        <Resume data={resumeData.resume}/>
+        <Portfolio data={resumeData.portfolio}/>
+        <Contact data={resumeData.main}/>
+        <Footer data={resumeData.main}/>
+      </div>
+    );
+  }
+  return <p>Hello World</p>
+  
+}
 class App extends Component {
 
   constructor(props){
@@ -56,4 +97,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App2;

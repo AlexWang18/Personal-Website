@@ -1,5 +1,5 @@
 const config = require('./utils/config')
-
+const resume = require('./resumeData.json')
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
@@ -26,6 +26,10 @@ app.use(cors())
 const Form = require('./models/form')
 
 // router controllers
+app.get('/resume', async (req, res) => {
+    return res.json(resume)
+})
+
 app.post('/contact/api', (req, res) => {
     const body = req.body
 

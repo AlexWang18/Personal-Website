@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import contactSubmit from '../services/contactService'
+import {contactSubmit} from '../services/serverServices'
 
 const Contact = (props) => {
    var name = props.name;
@@ -115,12 +115,12 @@ const Contact = (props) => {
             <aside className="four columns footer-widgets">
                <div className="widget widget_contact">
 
-                  <h4>Address and Phone</h4>
+                  <h4>Contact Info</h4>
                   <p className="address">
-                     {name}<br />
-                     {street} <br />
-                     {city}, {state} {zip}<br />
-                     <span>{phone}</span>
+                     Alex Wang
+                     <br></br>
+                      Pittsburgh, PA <br />
+                     <span>724-986-8135</span>
                   </p>
                </div>
             </aside>
