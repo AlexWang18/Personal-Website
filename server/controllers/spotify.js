@@ -38,7 +38,7 @@ const initSongs = async () => {
           artist: s.track.artists.map(a => a.name),
           url: s.track.external_urls.spotify,
           preview: s.track.preview_url,
-          image: s.track.album.images[0].url
+          image: s.track.album.images[1].url
         }
       )
     })

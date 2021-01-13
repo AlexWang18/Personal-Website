@@ -25,7 +25,6 @@ const Header = ({ data }) => {
       console.log(song)
       return <h1>Loading...</h1>
    }
-   console.log(song)
    return (
          <header id="home">
             <nav id="nav-wrap">
@@ -48,7 +47,7 @@ const Header = ({ data }) => {
                   <h3>{description}.</h3>
                   <hr />
                   <ul className="social">
-                     <a href={song.url} className="button btn spotify-btn"><i className="fa fa-book"></i>Song of the day</a>
+                     <a href={song.url} className="button btn spotify-btn"><i><img src = {song.image} width = "50" height = "50"></img></i>Song of the day: {song.name}</a>
                      <a href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a>
                   </ul>
                </div>
