@@ -3,18 +3,12 @@
       "name":"Alex Wang",
       "description":"Hi I'm Alex Wang, a first year student at the University of Pittsburgh planning to major in Computer Science and minor in Economics and Philosophy",
       "image":"cave2.jpg",
-      "bio":"I am looking for a Software Engineering based internship position in 2021 which will enable me to continue to further my technical and soft skills and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking. ",
+      "bio":"I am looking for a Software Engineering internship position for Summer 2021 that will allow me to continue to further my technical and soft skills and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking. ",
       "contactmessage":"How to reach me!",
       "email": "alw245@pitt.edu",
       "phone": "724-986-8135",
       "github":"https://github.com/AlexWang18",
       "project":"https://github.com/AlexWang18/Personal-Website",
-      "address":{
-        "street":"(Your Street)",
-        "city":"(Your City)",
-        "state":"(Your State)",
-        "zip": "(Your Zip/Postal Code)"
-      },
       "website": "alexwang18.github.io",
       "resumedownload":"Alex Wang Resume.docx",
       "social":[
@@ -55,11 +49,11 @@
       ],
       "skills":[
         {
-          "name":"Java",
-          "level":"60%"
+          "name":"java",
+          "level":"65%"
         },
         {
-          "name":"Node.js",
+          "name":"nodejs",
           "level":"50%"
         },
         {
@@ -67,8 +61,8 @@
           "level":"45%"
         },
         {
-          "name":"JS/HTML/CSS",
-          "level":"45%"
+          "name":"JSHTMLCSS",
+          "level":"50%"
         },
         {
           "name":"Python",

@@ -8,7 +8,6 @@ import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Portfolio from './Components/Portfolio';
 
-import { getResume } from './services/serverServices'
 import axios from 'axios'
 class App extends Component {
 
@@ -58,6 +57,7 @@ class App extends Component {
         <Portfolio data={resumeData.portfolio} />
         <Contact data={resumeData.main} />
         <Footer data={resumeData.main} />
+       
       </div>
     );
   }

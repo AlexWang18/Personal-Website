@@ -62,17 +62,6 @@
    #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
    #resume .main-col { padding-right: 5%; }   
 
-   /* Testimonials Section
-   ------------------------------------------------------------------- */
-   #testimonials .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
-   }
-   #testimonials blockquote p {
-      font-size: 22px;
-      line-height: 46px;      
-   }
-
     /* Call to Action Section
    ------------------------------------------------------------------- */
    #call-to-action .header-col h1:before {
@@ -317,10 +306,6 @@
 
    /* footer
    ------------------------------------------------------------------------ */
-  
-   /* copyright */
-   footer .copyright li:before { content: none; }
-   footer .copyright li { margin-right: 12px; }
 
    /* social links */
    footer .social-links { font-size: 22px; }

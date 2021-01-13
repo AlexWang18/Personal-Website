@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import ParticlesBg from 'particles-bg';
 import Particles from './Proton/Particles'
+
+import axios from 'axios'
 class Header extends Component {
+
+   
    render() {
 
       if (this.props.data) {
-         var project = this.props.data.project;
          var github = this.props.data.github;
          var name = this.props.data.name;
          var description = this.props.data.description;
-         var city = this.props.data.address.city;
          var networks = this.props.data.social.map(function (network) {
             return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
          })
@@ -38,7 +40,7 @@ class Header extends Component {
                   <h3>{description}.</h3>
                   <hr />
                   <ul className="social">
-                     <a href={project} className="button btn project-btn"><i className="fa fa-book"></i>Quote of the day</a>
+                     <a href= {'https://www.spotify.com/us/'} className="button btn spotify-btn"><i className="fa fa-book"></i>Song of the day</a>
                      <a href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a>
                   </ul>
                </div>
