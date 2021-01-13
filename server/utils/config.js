@@ -7,7 +7,12 @@ if(process.env.NODE_ENV === 'test'){
   MONGODB_URI = process.env.TEST_MONGODB_URI
 }
 
+const SPOTIFY_CLIENT = process.env.SPOTIFY_CLIENT
+const SPOTIFY_SECRET = process.env.SPOTIFY_SECRET
+
 module.exports = {
   MONGODB_URI,
-  PORT
+  PORT,
+  SPOTIFY_CLIENT,
+  SPOTIFY_SECRET
 }

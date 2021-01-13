@@ -6,6 +6,8 @@
       "bio":"I am looking for a Software Engineering internship position for Summer 2021 that will allow me to continue to further my technical and soft skills and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking. ",
       "contactmessage":"How to reach me!",
       "email": "alw245@pitt.edu",
+      "city": "Pittsburgh",
+      "state": "PA",
       "phone": "724-986-8135",
       "github":"https://github.com/AlexWang18",
       "project":"https://github.com/AlexWang18/Personal-Website",
@@ -71,6 +73,9 @@
         {
           "name":"Git",
           "level":"60%"
+        },{
+          "name":"MongoDB",
+          "level":"40%"
         }
       ]
     },
