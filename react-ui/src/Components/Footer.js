@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Footer = ({ data }) => {
   const networks = data.social.map(n =>
