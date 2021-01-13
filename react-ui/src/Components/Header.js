@@ -1,14 +1,14 @@
 import React, { Component, useEffect, useState } from 'react';
-import Particles from '../Proton/Particles'
+import Particles from './Proton/Particles'
 
-import { getSpotify } from '../services/serverServices'
+import { getSOTD } from './services/serverServices'
 
 const Header = ({ data }) => {
    const [song, setSong] = useState(null)
    
    useEffect(() => {
       async function fetch(){
-         const songOTD = await getSpotify()
+         const songOTD = await getSOTD()
          setSong(songOTD)
       }
       fetch()

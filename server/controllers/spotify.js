@@ -45,12 +45,20 @@ const initSongs = async () => {
   })
 }
 
+const starterDate = '2021-01-13T18:34:13.472043' //hard code in for now
+
+router.get('/sotd', async (req, res) => {
+  const date = new Date().toISOString()
+  const day = parseInt(date.substring(8,10)) - parseInt(starterDate.substring(8,10))
+
+  const songs = await Song.find({})
+  res.json(songs[day])
+})
 router.get('/', async (req, res) => {
   const songs = await Song.find({})
   res.json(songs)
-  //preLinks = data.body.items.map(s => s.track.preview_url)
-  //console.log(preLinks)
 })
+
 
 router.get('/:id', async (req, res) => {
   const id = req.params.id
