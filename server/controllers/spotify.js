@@ -14,9 +14,6 @@ const spotify = new spotifyWebApi({
   clientSecret: secret
 })
 
-//spotify.setClientId('9f43ee40f58f4ecaaddfad9dfb7d3682')
-//spotify.setClientSecret('8b6b9b41820145eaa5d95d5b724bdb6b')
-
 spotify.clientCredentialsGrant().then(
   function (data) {
     console.log('The access token expires in ' + data.body['expires_in']);
