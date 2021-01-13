@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { contactSubmit } from '../services/serverServices'
+import { contactSubmit } from './services/serverServices'
 
 const Contact = ({ data }) => {
    var name = data.name;
@@ -102,7 +102,7 @@ const Contact = ({ data }) => {
                   </fieldset>
                </form>
 
-               <div id="message-warning"> Error boy</div>
+               <div id="message-warning"> Error with submitting the form</div>
                <div id="message-success">
                   <i className="fa fa-check"></i>Your message was sent, thank you!<br />
                </div>
