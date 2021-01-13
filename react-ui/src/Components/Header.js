@@ -7,9 +7,12 @@ const Header = ({ data }) => {
    const [song, setSong] = useState(null)
    
    useEffect(() => {
-      const songOTD = getSpotify()
-      setSong(songOTD)
-   }, [])
+      async function fetch(){
+         const songOTD = await getSpotify()
+         setSong(songOTD)
+      }
+      fetch()
+   },[])
 
    var github = data.github;
    var name = data.name;
