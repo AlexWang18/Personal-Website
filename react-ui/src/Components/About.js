@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = ({data}) => {
    const name = data.name
-   const profilepic = "images/"+"2020RaccoonCreek-0082.jpeg"
+   const profilepic = "images/"+"raven.jpg"
    const bio = data.bio
    const phone = data.phone
    const email = data.email
@@ -13,7 +13,7 @@ const About = ({data}) => {
          <section id="about">
             <div className="row">
                <div className="three columns">
-                  <img className="profile-pic" src={profilepic} alt="Alex Wang profile" />
+                  <img className="profile-pic" src={profilepic} alt="Alex Wang pfp" />
                </div>
                <div className="nine columns main-col">
                   <h2>About Me</h2>

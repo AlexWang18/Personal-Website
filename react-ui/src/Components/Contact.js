@@ -3,13 +3,12 @@ import { contactSubmit } from './services/serverServices'
 
 const Contact = ({ data }) => {
    const name = data.name;
-   const street = data.street;
    const city = data.city;
    const state = data.state;
-   const zip = data.zip;
    const phone = data.phone;
    const email = data.email;
-   const message = data.contactmessage;
+   const contactMessage = data.contactmessage; 
+
    const [newName, setName] = useState('')
    const [newEmail, setEmail] = useState('')
    const [newMessage, setMessage] = useState('')
@@ -22,7 +21,6 @@ const Contact = ({ data }) => {
 
    const handleSubmit = (e) => {
       e.preventDefault()
-      console.log('in')
 
       const userData = {
          name: newName,
@@ -61,7 +59,7 @@ const Contact = ({ data }) => {
 
             <div className="ten columns">
 
-               <p className="lead">{message}</p>
+               <p className="lead">{contactMessage}</p>
 
             </div>
 
@@ -114,8 +112,10 @@ const Contact = ({ data }) => {
 
                   <h4>Contact Info</h4>
                   <p className="address">
-                     {name}
-                     <br></br>
+                     {name} 
+                     <br/>
+                     {email}
+                     <br/>
                      {city}, {state} <br />
                      <span>{phone}</span>
                   </p>

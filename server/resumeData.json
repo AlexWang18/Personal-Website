@@ -4,7 +4,7 @@
       "description":"Hi I'm Alex Wang, a first year student at the University of Pittsburgh planning to major in Computer Science and minor in Economics and Philosophy",
       "image":"cave2.jpg",
       "bio":"I am looking for a Software Engineering internship position for Summer 2021 that will allow me to continue to further my technical and soft skills and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking. ",
-      "contactmessage":"Send me a message!",
+      "contactmessage":"Send me a message, I'll get back to you within 24 hours",
       "email": "alw245@pitt.edu",
       "city": "Pittsburgh",
       "state": "PA",
@@ -83,26 +83,30 @@
       "projects": [
         {
           "title":"Chess",
-          "category":"",
-          "image":"chess-icon.png",
+          "category":"Java OOP and Design Patterns",
+          "image":"wp3269688.png",
+          "icon":"fas fa-chess fa-3x",
           "url":"https://github.com/AlexWang18/Chess"
         },
         {
           "title":"Phonebook",
-          "category":"",
-          "image":"cave.jpg",
+          "category":"React, Express, and MongoDB",
+          "image":"iphone.jpg",
+          "icon":"fas fa-phone fa-3x",
           "url":"https://github.com/AlexWang18/Phonebook"
         },
         {
           "title":"Twitter Bot",
-          "category":"",
-          "image":"Twitter_Logo_WhiteOnBlue.png",
+          "category":"Twitter4J Library",
+          "image":"twitterdark.jpg",
+          "icon":"fas fa-twitter fa-3x",
           "url":"https://github.com/AlexWang18/"
         },
         {
           "title":"To be seen",
           "category":"",
           "image":"external-content.duckduckgo.com.jpg",
+          "icon":"fas fa-question-circle fa-3x",
           "url":""
         }
         

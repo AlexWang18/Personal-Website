@@ -14,21 +14,22 @@ const spotify = new spotifyWebApi({
   clientSecret: secret
 })
 
-spotify.clientCredentialsGrant().then(
-  function (data) {
-    console.log('The access token expires in ' + data.body['expires_in']);
-    console.log('The access token is ' + data.body['access_token']);
-
-    // Save the access token so that it's used in future calls
-    spotify.setAccessToken(data.body['access_token']);
-  },
-  function (err) {
-    console.log('Something went wrong when retrieving an access token', err);
-  }
-);
-spotify.setAccessToken('BQB62QuckE5YXS-zui7CZykLRIgT1_c-XQ0OLYyFW56ZY2Eyc8xSzb8y7kXzgET6UQYIaMEOuDQImoQLVBg')
 
 const initSongs = async () => {
+  spotify.clientCredentialsGrant().then(
+    function (data) {
+      console.log('The access token expires in ' + data.body['expires_in']);
+      console.log('The access token is ' + data.body['access_token']);
+  
+      // Save the access token so that it's used in future calls
+      spotify.setAccessToken(data.body['access_token']);
+    },
+    function (err) {
+      console.log('Something went wrong when retrieving an access token', err);
+    }
+  );
+  spotify.setAccessToken('BQB62QuckE5YXS-zui7CZykLRIgT1_c-XQ0OLYyFW56ZY2Eyc8xSzb8y7kXzgET6UQYIaMEOuDQImoQLVBg')
+  
   await spotify.getPlaylistTracks('17ikjm0CJRR1vTFXovJ1BS').then(data => { //first 100 of bop
     Song.deleteMany({})
     data.body.items.forEach(s => {

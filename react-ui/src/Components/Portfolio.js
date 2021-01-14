@@ -1,12 +1,14 @@
 import React from 'react';
 
 const Project = ({ p }) => {
-  var projectImage = 'images/portfolio/' + p.image;
+  const projectImage = 'images/portfolio/' + p.image;
   return (
     <div key={p.title} className="columns portfolio-item">
       <div className="item-wrap">
         <a href={p.url} title={p.title}>
-          <img alt={p.title} src={projectImage} />
+        {/* <i class="fa fa-phonefa-5x"></i> */}
+        {/* <i className = {p.icon}></i> */}
+         <img alt={p.title} src={projectImage} />
           <div className="overlay">
             <div className="portfolio-item-meta">
               <h5>{p.title}</h5>
@@ -25,7 +27,6 @@ const Portfolio = ({ data }) => {
   )
   return (
     <section id="portfolio">
-
       <div className="row">
 
         <div className="twelve columns collapsed">
