@@ -18,7 +18,7 @@ export default class Particles extends React.Component {
     try {
       RAFManager.remove(this.renderProton);
       this.proton.destroy();
-    } catch (e) {}
+    } catch (e) { }
   }
 
   createProton(canvas) {
@@ -47,7 +47,7 @@ export default class Particles extends React.Component {
     );
 
     emitter.addBehaviour(new Proton.Alpha(Proton.getSpan(0.2, 0.9)));
-    emitter.addBehaviour(new Proton.Color("#ffffff"));
+    emitter.addBehaviour(new Proton.Color("#BB86DC")); //#ffffff
     emitter.addBehaviour(
       new Proton.CrossZone(
         new Proton.RectZone(0, 0, canvas.width, canvas.height),
@@ -134,7 +134,6 @@ export default class Particles extends React.Component {
 
   renderProton() {
     this.proton.update();
-    //this.proton.stats.update(2);
   }
 
   render() {

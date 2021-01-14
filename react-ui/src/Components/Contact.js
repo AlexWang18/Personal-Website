@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import { contactSubmit } from './services/serverServices'
 
+import { getSOTD } from './services/serverServices'
+
 const Contact = ({ data }) => {
-   var name = data.name;
-   var street = data.street;
-   var city = data.city;
-   var state = data.state;
-   var zip = data.zip;
-   var phone = data.phone;
-   var email = data.email;
-   var message = data.contactmessage;
+   //if(data) getLatest()
+   const name = data.name;
+   const city = data.city;
+   const state = data.state;
+   const phone = data.phone;
+   const email = data.email;
+   const contactMessage = data.contactmessage; 
+
    const [newName, setName] = useState('')
    const [newEmail, setEmail] = useState('')
    const [newMessage, setMessage] = useState('')
@@ -22,7 +25,6 @@ const Contact = ({ data }) => {
 
    const handleSubmit = (e) => {
       e.preventDefault()
-      console.log('in')
 
       const userData = {
          name: newName,
@@ -47,7 +49,18 @@ const Contact = ({ data }) => {
    const handleMessageChange = (event) => {
       setMessage(event.target.value)
    }
+   const [song, setSong] = useState(null)
 
+  useEffect(() => {
+    const fetch = async () => {
+      const songOTD = await getSOTD()
+      setSong(songOTD)
+    }
+    fetch()
+  }, [])
+  if (song === null) {
+    return <h1>Loading...</h1>
+  }
    return (
       <section id="contact">
 
@@ -61,7 +74,7 @@ const Contact = ({ data }) => {
 
             <div className="ten columns">
 
-               <p className="lead">{message}</p>
+               <p className="lead">{contactMessage}</p>
 
             </div>
 
@@ -114,31 +127,21 @@ const Contact = ({ data }) => {
 
                   <h4>Contact Info</h4>
                   <p className="address">
-                     {name}
-                     <br></br>
+                     {name} 
+                     <br/>
+                     {email}
+                     <br/>
                      {city}, {state} <br />
                      <span>{phone}</span>
                   </p>
                </div>
-               <div className="widget widget_tweets">
-                  <h4 className="widget-title">Latest Tweets</h4>
-                  <ul id="twitter">
-                     <li>
-                        <span>
-                           filler tweets
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">2 Days Ago</a></b>
-                     </li>
-                     <li>
-                        <span>
-                           use twitter api here in frontend should suffice
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">3 Days Ago</a></b>
-                     </li>
-                  </ul>
+               <div>
+               <img src= "images/snowbody.jpg" alt = "closing picture" width = "200" height = "200"></img>
                </div>
+               <div className = "spotifyplayer">
+            <a href={song.url} className="button btn spotify-btn"><i><img className="spotifypic" src={song.image} width="100" height="100"></img></i>
+              <h6>Song of the day: </h6> <p>{song.name} - {song.artist}</p></a>
+          </div>
             </aside>
          </div>
       </section>
