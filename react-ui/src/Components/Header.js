@@ -1,29 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Particles from './Proton/Particles'
 
-import { getSOTD } from './services/serverServices'
-
 const Header = ({ data }) => {
-   const [song, setSong] = useState(null)
+
+   const name = data.name;
+   const github = data.github;
+   const twitter = data.twitter;
+
+   const description = data.description;
    
-   useEffect(() => {
-      async function fetch(){
-         const songOTD = await getSOTD()
-         setSong(songOTD)
-      }
-      fetch()
-   },[])
-
-   var github = data.github;
-   var name = data.name;
-   var description = data.description;
-   var networks = data.social.map(function (network) {
-      return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-   })
-
-   if(song === null){
-      return <h1>Loading...</h1>
-   }
    return (
          <header id="home">
             <nav id="nav-wrap">
@@ -46,8 +31,8 @@ const Header = ({ data }) => {
                   <h3>{description}.</h3>
                   <hr />
                   <ul className="social">
-                     <a href={song.url} className="button btn spotify-btn"><i><img src = {song.image} width = "50" height = "50"></img></i>Song of the day: {song.name}</a>
-                     <a href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a>
+                     <span> <a href = {twitter} className="button btn twitter-btn"><i className="fa fa-twitter"></i>Twitter</a> </span>
+                     <li> <a href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a> </li>
                   </ul>
                </div>
             </div>

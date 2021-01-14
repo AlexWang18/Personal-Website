@@ -107,6 +107,11 @@ header .social li {
 }
 header .social li a { color: #525252; }
 header .social li a:hover { color: #BB86FC; }
+header .social span a:hover { 
+   /* not getting twitter anchor */
+   background-color: #BB86FC;
+}
+
 
 /* scrolldown link */
 header .scrolldown a {
@@ -926,4 +931,7 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 .github-btn{
    background-color: #34495e !important;
+}
+.twitter-btn{
+   background-color: #00acee !important
 }

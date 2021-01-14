@@ -1,7 +1,7 @@
 {
     "main": {
       "name":"Alex Wang",
-      "description":"Hi I'm Alex Wang, a first year student at the University of Pittsburgh planning to major in Computer Science and minor in Economics and Philosophy",
+      "description":"Hi I'm Alex Wang, a student at the University of Pittsburgh planning to major in Computer Science and minor in Economics and Philosophy",
       "image":"cave2.jpg",
       "bio":"I am looking for a Software Engineering internship position for Summer 2021 that will allow me to continue to further my technical and soft skills and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking. ",
       "contactmessage":"Send me a message, I'll get back to you within 24 hours",
@@ -11,6 +11,7 @@
       "phone": "724-986-8135",
       "github":"https://github.com/AlexWang18",
       "project":"https://github.com/AlexWang18/Personal-Website",
+      "twitter":"http://twitter.com/AlexunderWang",
       "website": "alexwang18.github.io",
       "resumedownload":"Alex Wang Resume.docx",
       "social":[
