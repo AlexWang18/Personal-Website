@@ -247,6 +247,7 @@ ul#nav li.current a { color: #BB86FC; }
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
+   color: #E8E8E8;
 }
 #resume h1 span {
    border-bottom: 3px solid #BB86FC;
@@ -254,6 +255,7 @@ ul#nav li.current a { color: #BB86FC; }
 }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
+   /*  */color: #E8E8E8;
 }
 
 #resume .header-col { padding-top: 9px; }

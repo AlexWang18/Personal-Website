@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { contactSubmit } from './services/serverServices'
 
 const Contact = ({ data }) => {
-   var name = data.name;
-   var street = data.street;
-   var city = data.city;
-   var state = data.state;
-   var zip = data.zip;
-   var phone = data.phone;
-   var email = data.email;
-   var message = data.contactmessage;
+   const name = data.name;
+   const street = data.street;
+   const city = data.city;
+   const state = data.state;
+   const zip = data.zip;
+   const phone = data.phone;
+   const email = data.email;
+   const message = data.contactmessage;
    const [newName, setName] = useState('')
    const [newEmail, setEmail] = useState('')
    const [newMessage, setMessage] = useState('')

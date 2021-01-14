@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const About = ({data}) => {
    const name = data.name
@@ -6,7 +6,7 @@ const About = ({data}) => {
    const bio = data.bio
    const phone = data.phone
    const email = data.email
-   const resumeDownload = data.resumeDownload
+   const resumeDownload = data.resumedownload
 
    return (
       <div className="about">

@@ -1,5 +1,5 @@
 const config = require('./utils/config')
-const resume = require('./resumeData.json')
+
 const express = require('express')
 const morgan = require('morgan')
 
@@ -25,15 +25,15 @@ app.use(cors())
 // serve static front end files (our react app)
 
 //app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
-const Form = require('./models/form')
 
 app.use('/api/spotify', spotifyRouter)
 
+const resume = require('./resumeData.json')
 app.get('/resume', async (req, res) => {
     return res.json(resume)
 })
 
-
+const Form = require('./models/form')
 app.post('/contact/api', (req, res) => {
     const body = req.body
 
