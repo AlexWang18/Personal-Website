@@ -28,7 +28,10 @@ const Footer = ({ data }) => {
           <ul className="social-links">
             {networks}
           </ul>
-          <div><a href={song.url} className="button btn spotify-btn"><i><img src={song.image} width="50" height="50"></img></i>Song of the day: {song.name}</a></div>
+        {/*    <div>
+            <a href={song.url} className="button btn spotify-btn"><i><img className="spotifypic" src={song.image} width="50" height="50"></img></i>
+              <p>Song of the day:</p> <p>{song.name} {song.artist}</p></a>
+          </div> */}
 
         </div>
         <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>

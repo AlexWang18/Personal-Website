@@ -1,7 +1,7 @@
 {
     "main": {
       "name":"Alex Wang",
-      "description":"Hi I'm Alex Wang, a student at the University of Pittsburgh planning to major in Computer Science and minor in Economics and Philosophy",
+      "description":"I'm a student at the University of Pittsburgh planning to major in Computer Science and minor in Economics and Philosophy",
       "image":"cave2.jpg",
       "bio":"I am looking for a Software Engineering internship position for Summer 2021 that will allow me to continue to further my technical and soft skills and gain some valuable work experience. When I am not coding or doing coursework, I spend the bulk of my time either lifting, hiking, or cooking. ",
       "contactmessage":"Send me a message, I'll get back to you within 24 hours",
@@ -44,7 +44,7 @@
           "school":"University of Pittsburgh",
           "degree":"Computer Science",
           "graduated":"2024",
-          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, game theory, and HCI."
+          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, Open Source, game theory, and HCI."
         }
       ],
       "work":[
@@ -89,27 +89,27 @@
       "projects": [
         {
           "title":"Chess",
-          "category":"Java OOP and Design Patterns",
+          "category":"This was my first project I completed shortly after my first semester. I used Maven and Java OOP design patterns to create a fully functional Chess emulator on the command line.",
           "image":"wp3269688.png",
           "icon":"fas fa-chess fa-3x",
           "url":"https://github.com/AlexWang18/Chess"
         },
         {
           "title":"Phonebook",
-          "category":"React, Express, and MongoDB",
+          "category":"A simple website I made using React, Express, and MongoDB. It allows users to provide their credentials and will store only the validated phone numbers. It also has filtering for parsing through a larger set of people",
           "image":"iphone.jpg",
           "icon":"fas fa-phone fa-3x",
           "url":"https://github.com/AlexWang18/Phonebook"
         },
         {
           "title":"Twitter Bot",
-          "category":"Twitter4J Library",
+          "category":"This was mostly a for leisure project where I made a bot that could automatically reply to tweets matching queries and also store those tweets into a text file",
           "image":"twitterdark.jpg",
           "icon":"fas fa-twitter fa-3x",
           "url":"https://github.com/AlexWang18/"
         },
         {
-          "title":"To be seen",
+          "title":"To be added",
           "category":"",
           "image":"external-content.duckduckgo.com.jpg",
           "icon":"fas fa-question-circle fa-3x",

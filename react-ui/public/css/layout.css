@@ -63,21 +63,28 @@ header .banner {
    padding-bottom: 30px;
    text-align: center;
 }
+@font-face {
+   font-family: CairoSemi;
+   src: url(./fonts/Cairo/Cairo-SemiBold.ttf);
+ }
 @font-face{
-   font-family: cairo;
-   src: url(Cairo-Bold.tff);
-}
+   font-family: fontawesome;
+   src: url(./font-awesome/fonts/fontawesome-webfont.woff)
+ }
+ @font-face{
+    font-family: Spectral;
+    src: url(./fonts/Spectral/Spectral-SemiBold.ttf)
+ }
 header .banner-text { width: 100%; }
 header .banner-text h1 {
-   font-family: cairo;
-   font: 90px/1.1em 'FontAwesome', 'serif';
+   font: 90px/1.1em Spectral, '';
    font-size: 50px;
    color: #ddd;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+   font: 18px/1.9em 'librebaskerville-regular', CairoSemi;
    color: #ddd;
    margin: 0 auto;
    width: 70%;
@@ -457,13 +464,13 @@ ul#nav li.current a { color: #BB86FC; }
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 
-   background: url(../images/overlay-bg.png) repeat;
+   background: url(../images/portfoliobg.png) repeat;
 }
 .portfolio-item .item-wrap .link-icon {
    display: block;
    color: #fff;
-   height: 30px;
-   width: 30px;
+   height: 50px;
+   width: 50px;
    font-size: 18px;
    line-height: 30px;
    text-align: center;
@@ -486,14 +493,14 @@ ul#nav li.current a { color: #BB86FC; }
 .portfolio-item .item-wrap img {
    vertical-align: bottom;
 }
-.portfolio-item .portfolio-item-meta { padding: 18px }
+.portfolio-item .portfolio-item-meta { padding: 5px }
 .portfolio-item .portfolio-item-meta h5 {
    font: 14px/21px 'opensans-bold', sans-serif;
-   color: #fff;
+   color: #BB86FC;
 }
 .portfolio-item .portfolio-item-meta p {
    font: 12px/18px 'opensans-light', sans-serif;
-   color: #c6c7c7;
+   color: #FFFFFF;
    margin-bottom: 0;
 }
 
@@ -729,7 +736,7 @@ call-to-action .button {
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #0762f9; }
+#contact a, #contact a:visited  { color: #BB86FC; }
 #contact a:hover, #contact a:focus { color: #fff; }
 
 #contact h1 {
@@ -741,6 +748,7 @@ call-to-action .button {
 }
 #contact h1 span { display: none; }
 #contact h1:before {
+   /* how to use icons i guess */
    font-family: 'FontAwesome';
    content: "\f0e0";
 	padding-right: 10px;
@@ -750,7 +758,6 @@ call-to-action .button {
    float: left;
    color: #ebeeee;
 }
-
 #contact h4 {
    font: 16px/24px 'opensans-bold', sans-serif;
    color: #EBEEEE;
@@ -762,7 +769,6 @@ call-to-action .button {
 }
 #contact .header-col { padding-top: 6px; }
 
-
 /* contact form */
 #contact form { margin-bottom: 30px; }
 #contact label {
@@ -773,6 +779,7 @@ call-to-action .button {
 	float: left;
    width: 26%;
 }
+
 #contact input,
 #contact textarea,
 #contact select {
@@ -806,11 +813,41 @@ call-to-action .button {
 }
 #contact button.submit:hover {
 	color: #0D0D0D;
-	background: #fff;
+	background: #BB86FC;
 }
 #contact span.required {
 	color: #BB86FC;
 	font-size: 13px;
+}
+@font-face{
+   font-family: prima;
+   src: url(./fonts/proxima-nova/Proxima\ Nova\ Alt\ Bold.otf)
+}
+.spotifyplayer {
+   font: 15px/24px prima, 'opensans-bold';
+   color: #EBEEEE;
+   display: inline;
+   width: 100%;
+}
+.spotifyplayer h6{
+   padding-top: 0%;
+   font-size: medium;
+}
+.spotify-btn{
+   border-radius: 100%;        
+   display:inline-block;
+   line-height:100px;
+   background-color: #1DB954 !important; 
+
+  padding:30px;
+  text-align: center;
+  vertical-align: center;
+}
+.spotifyplayer p {
+  color: #ebeeee;
+  font: 15px/24px prima, 'opensans-semibold';
+  font-style: normal;
+  font-weight: 400;
 }
 #message-warning, #message-success {
    display: none;
@@ -926,9 +963,8 @@ footer .social-links li:first-child { margin-left: 0; }
 .social .btn i{
    margin-right: 15px;
 }
-.spotify-btn{
-   background-color: #1DB954 !important;
-}
+
+
 .github-btn{
    background-color: #34495e !important;
 }

@@ -6,7 +6,6 @@ const Project = ({ p }) => {
     <div key={p.title} className="columns portfolio-item">
       <div className="item-wrap">
         <a href={p.url} title={p.title}>
-        {/* <i className = {p.icon}></i> */}
          <img alt={p.title} src={projectImage} />
           <div className="overlay">
             <div className="portfolio-item-meta">
