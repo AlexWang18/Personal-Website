@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+
 import { contactSubmit } from './services/serverServices'
+import { getLatest } from './services/twitterServices'
 
 const Contact = ({ data }) => {
+   //if(data) getLatest()
    const name = data.name;
    const city = data.city;
    const state = data.state;
@@ -120,6 +123,10 @@ const Contact = ({ data }) => {
                      <span>{phone}</span>
                   </p>
                </div>
+               <div>
+               <img src= "images/snowbody.jpg" alt = "closing picture" width = "200" height = "200"></img>
+               </div>
+               {/*  
                <div className="widget widget_tweets">
                   <h4 className="widget-title">Latest Tweets</h4>
                   <ul id="twitter">
@@ -138,7 +145,8 @@ const Contact = ({ data }) => {
                         <b><a href="#">3 Days Ago</a></b>
                      </li>
                   </ul>
-               </div>
+               </div> */}
+              {/* <div><img src= "public/images/raven.JPG" alt = "closing picture"> </img> </div>  */}
             </aside>
          </div>
       </section>

@@ -43,11 +43,16 @@
           "school":"University of Pittsburgh",
           "degree":"Computer Science",
           "graduated":"2024",
-          "description":"Current first year student at the school of Computing and Information"
+          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, game theory, and HCI."
         }
       ],
       "work":[
-        
+        {
+        "company": "Fortnite",
+        "title":"Pro Player",
+        "years": "2018-2019",
+        "description":"I competed on the professional level and won multiple online tournaments which improved my team building skills and sharpened my competitive spirit."
+        }
       ],
       "skills":[
         {

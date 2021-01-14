@@ -19,8 +19,8 @@ const Resume = ({ data }) => {
     </div>
   )
   const work = data.work.map((w) =>
-    <div key={w.company}><h3>{work.company}</h3>
-      <p className="info">{work.title}<span>&bull;</span> <em className="date">{w.years}</em></p>
+    <div key={w.company}><h3>{w.company}</h3>
+      <p className="info">{w.title}<span>&bull;</span> <em className="date">{w.years}</em></p>
       <p>{w.description}</p>
     </div>
   )

@@ -22,7 +22,6 @@ const Header = ({ data }) => {
    })
 
    if(song === null){
-      console.log(song)
       return <h1>Loading...</h1>
    }
    return (
