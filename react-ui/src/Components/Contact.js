@@ -139,7 +139,7 @@ const Contact = ({ data }) => {
                <img src= "images/snowbody.jpg" alt = "closing picture" width = "200" height = "200"></img>
                </div>
                <div className = "spotifyplayer">
-            <a href={song.url} className="button btn spotify-btn"><i><img className="spotifypic" src={song.image} width="50" height="50"></img></i>
+            <a href={song.url} className="button btn spotify-btn"><i><img className="spotifypic" src={song.image} width="100" height="100"></img></i>
               <h6>Song of the day: </h6> <p>{song.name} - {song.artist}</p></a>
           </div>
             </aside>

@@ -824,31 +824,30 @@ call-to-action .button {
    src: url(./fonts/proxima-nova/Proxima\ Nova\ Alt\ Bold.otf)
 }
 .spotifyplayer {
+   margin: 100 100 100;
    font: 15px/24px prima, 'opensans-bold';
    color: #EBEEEE;
    display: inline;
-   width: 100%;
 }
 .spotifyplayer h6{
-   padding-top: 0%;
    font-size: medium;
 }
-.spotify-btn{
-   border-radius: 100%;        
-   display:inline-block;
-   line-height:100px;
+.spotify-btn{ /* circle */
+   padding: 20px;
+   padding-bottom: 10px;
+   border-radius: 90%;        
    background-color: #1DB954 !important; 
-
-  padding:30px;
-  text-align: center;
-  vertical-align: center;
+   
+   text-align: center;
+   vertical-align: center;
 }
 .spotifyplayer p {
   color: #ebeeee;
-  font: 15px/24px prima, 'opensans-semibold';
+  font: 16px/24px prima, 'opensans-semibold';
   font-style: normal;
   font-weight: 400;
 }
+
 #message-warning, #message-success {
    display: none;
 	background: #0F0F0F;
