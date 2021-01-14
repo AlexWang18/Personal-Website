@@ -1,4 +1,5 @@
 const config = require('./utils/config')
+const path = require('path');
 
 const express = require('express')
 const morgan = require('morgan')
@@ -22,9 +23,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 
-// serve static front end files (our react app)
-
-//app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
+app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('/api/spotify', spotifyRouter)
 

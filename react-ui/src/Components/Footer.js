@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from 'react';
-
-import { getSOTD } from './services/serverServices'
+import React from 'react';
 
 const Footer = ({ data }) => {
 
   const networks = data.social.map(n =>
     <li key={n.name}><a href={n.url}><i className={n.className}></i></a></li>
   )
-
-  const [song, setSong] = useState(null)
-
-  useEffect(() => {
-    const fetch = async () => {
-      const songOTD = await getSOTD()
-      setSong(songOTD)
-    }
-    fetch()
-  }, [])
-  if (song === null) {
-    return <h1>Loading...</h1>
-  }
   return (
     <footer>
 
@@ -28,10 +13,7 @@ const Footer = ({ data }) => {
           <ul className="social-links">
             {networks}
           </ul>
-        {/*    <div>
-            <a href={song.url} className="button btn spotify-btn"><i><img className="spotifypic" src={song.image} width="50" height="50"></img></i>
-              <p>Song of the day:</p> <p>{song.name} {song.artist}</p></a>
-          </div> */}
+       
 
         </div>
         <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>

@@ -213,6 +213,7 @@ ul#nav li.current a { color: #BB86FC; }
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
+   border-bottom: 1px solid #E8E8E8;
 }
 
 #about a, #about a:visited  { color: #BB86FC; }
@@ -324,7 +325,7 @@ ul#nav li.current a { color: #BB86FC; }
 .bars li {
    position: relative;
   	margin-bottom: 60px;
-  	background: #f8f8ff;
+  	background: #6E7881;
   	height: 42px;
   	border-radius: 0px;
 }
@@ -352,32 +353,32 @@ ul#nav li.current a { color: #BB86FC; }
 }
 
 .git {
-  	-moz-animation: git 2s ease;
-  	-webkit-animation: git 2s ease;
+  	-moz-animation: git 7s ease;
+  	-webkit-animation: git 7s ease;
 }
 .nodejs {
-  	-moz-animation: nodejs 2s ease;
-  	-webkit-animation: nodejs 2s ease;
+  	-moz-animation: nodejs 7s ease;
+  	-webkit-animation: nodejs 7s ease;
 }
 .reactjs {
-  	-moz-animation: reactjs 2s ease;
-  	-webkit-animation: reactjs 2s ease;
+  	-moz-animation: reactjs 6s ease;
+  	-webkit-animation: reactjs 6s ease;
 }
 .jshtmlcss{
-  	-moz-animation: jshtmlcss 2s ease;
-  	-webkit-animation: jshtmlcss 2s ease;
+  	-moz-animation: jshtmlcss 5s ease;
+  	-webkit-animation: jshtmlcss 5s ease;
 }
 .python {
-  	-moz-animation: python 2s ease;
-  	-webkit-animation: python 2s ease;
+  	-moz-animation: python 5s ease;
+  	-webkit-animation: python 5s ease;
 }
 .java {
-  	-moz-animation: java 2s ease;
-  	-webkit-animation: java 2s ease;
+  	-moz-animation: java 7s ease;
+  	-webkit-animation: java 7s ease;
 }
 .mongodb{
-   -moz-animation: mongodb 2s ease;
-  	-webkit-animation: mongodb 2s ease;
+   -moz-animation: mongodb 5s ease;
+  	-webkit-animation: mongodb 5s ease;
 }
 
 @-webkit-keyframes git {
@@ -734,7 +735,7 @@ call-to-action .button {
    padding-bottom: 102px;
    color: #636363;
 }
-#contact .section-head { margin-bottom: 42px; }
+#contact .section-head { margin-bottom: 20px; }
 
 #contact a, #contact a:visited  { color: #BB86FC; }
 #contact a:hover, #contact a:focus { color: #fff; }
@@ -767,7 +768,8 @@ call-to-action .button {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
 }
-#contact .header-col { padding-top: 6px; }
+
+#contact .header-col { padding-top: 6px; margin-bottom: 10px;}
 
 /* contact form */
 #contact form { margin-bottom: 30px; }
@@ -797,7 +799,7 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
 	color: #fff;
-	background-color: #BB86FC;
+	background-color: #868cfc;
 }
 #contact button.submit {
 	text-transform: uppercase;
