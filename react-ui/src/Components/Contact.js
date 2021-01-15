@@ -12,7 +12,8 @@ const Contact = ({ data }) => {
    const phone = data.phone;
    const email = data.email;
    const contactMessage = data.contactmessage; 
-
+   const pic = 'images/' + data.endingpic
+   
    const [newName, setName] = useState('')
    const [newEmail, setEmail] = useState('')
    const [newMessage, setMessage] = useState('')
@@ -109,7 +110,7 @@ const Contact = ({ data }) => {
                      <div>
                         <button className="submit">Submit</button>
                         <span id="image-loader">
-                           <img alt="" src="images/loader.gif" />
+                           {/* img gif */}
                         </span>
                      </div>
                   </fieldset>
@@ -136,7 +137,7 @@ const Contact = ({ data }) => {
                   </p>
                </div>
                <div>
-               <img src= "images/snowbody.jpg" alt = "closing picture" width = "200" height = "200"></img>
+               <img src= {pic} alt = "closing picture" width = "200" height = "200"></img>
                </div>
                <div className = "spotifyplayer">
             <a href={song.url} className="button btn spotify-btn"><i><img className="spotifypic" src={song.image} width="100" height="100"></img></i>

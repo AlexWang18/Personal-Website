@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = ({data}) => {
    const name = data.name
-   const profilepic = "images/"+"raven.jpg"
+   const profilepic = 'images/' + data.image // not routing correctly if i include the /images in resumedata
    const bio = data.bio
    const phone = data.phone
    const email = data.email

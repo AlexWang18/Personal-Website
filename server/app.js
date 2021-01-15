@@ -11,7 +11,7 @@ const spotifyRouter = require('./controllers/spotify')
 
 
 const app = express()
-console.log('mode: ',process.env.NODE_ENV)
+console.log('mode: ', process.env.NODE_ENV)
 
 const mongoose = require('mongoose')
 
@@ -36,10 +36,17 @@ const resume = require('./resumeData.json')
 app.get('/resume', async (req, res) => {
     return res.json(resume)
 })
+/*
+app.get("/", (req, res) => {
+    let url = path.join(__dirname, '../react-ui/build', 'index.html');
+    if (!url.startsWith('/app/')) // since we're on local windows
+        url = url.substring(1);
+    res.sendFile(url);
+}); */
 
 app.get('/home', (req, res) => {
     console.log('hello from backend')
-    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'))
 })
 
 app.get('/about', (req, res) => {
