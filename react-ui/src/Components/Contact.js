@@ -109,7 +109,7 @@ const Contact = ({ data }) => {
                      <div>
                         <button className="submit">Submit</button>
                         <span id="image-loader">
-                           <img alt="" src="images/loader.gif" />
+                           {/* img gif */}
                         </span>
                      </div>
                   </fieldset>

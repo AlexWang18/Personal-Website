@@ -11,7 +11,7 @@ const spotifyRouter = require('./controllers/spotify')
 
 
 const app = express()
-console.log('mode: ',process.env.NODE_ENV)
+console.log('mode: ', process.env.NODE_ENV)
 
 const mongoose = require('mongoose')
 
@@ -37,9 +37,13 @@ app.get('/resume', async (req, res) => {
     return res.json(resume)
 })
 
+app.get('/', (req, res) => {
+    console.log('can frontend resolve')
+    res.sendFile(path.resolve(path.resolve(__dirname, '../react-ui/build', 'index.html')))
+})
 app.get('/home', (req, res) => {
     console.log('hello from backend')
-    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'))
+    res.sendFile(path.resolve(path.resolve(__dirname, '../react-ui/build', 'index.html')))
 })
 
 app.get('/about', (req, res) => {
