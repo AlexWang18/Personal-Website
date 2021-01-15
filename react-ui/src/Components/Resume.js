@@ -73,6 +73,7 @@ const Resume = ({ data }) => {
           <p>{skillmessage}</p>
 
           <div className="bars">
+
             <ul className="skills">
               {skills}
             </ul>
