@@ -36,14 +36,17 @@ const resume = require('./resumeData.json')
 app.get('/resume', async (req, res) => {
     return res.json(resume)
 })
-
-app.get('/', (req, res) => {
-    console.log('can frontend resolve')
-    res.sendFile(path.resolve(path.resolve(__dirname, '../react-ui/build', 'index.html')))
-})
+/*
+app.get("/", (req, res) => {
+    let url = path.join(__dirname, '../react-ui/build', 'index.html');
+    if (!url.startsWith('/app/')) // since we're on local windows
+        url = url.substring(1);
+    res.sendFile(url);
+}); */
+// Error: ENOENT: no such file or directory, stat '/app/react-ui/build/index.html'
 app.get('/home', (req, res) => {
     console.log('hello from backend')
-    res.sendFile(path.resolve(path.resolve(__dirname, '../react-ui/build', 'index.html')))
+    res.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'))
 })
 
 app.get('/about', (req, res) => {
