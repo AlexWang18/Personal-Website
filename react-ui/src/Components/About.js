@@ -6,7 +6,7 @@ const About = ({data}) => {
    const bio = data.bio
    const phone = data.phone
    const email = data.email
-   const resumeDownload = data.resumedownload
+   const resumeDownload = '/' + data.resumedownload
 
    return (
       <div className="about">
@@ -30,7 +30,7 @@ const About = ({data}) => {
                      </div>
                      <div className="columns download">
                         <p>
-                           <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
+                           <a href={resumeDownload} rel='noreferrer' target='_blank' className="button"><i className="fa fa-download"></i>Download Resume</a>
                         </p>
                      </div>
                   </div>
