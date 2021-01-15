@@ -10,6 +10,7 @@ if(process.env.NODE_ENV === 'test'){
 const SPOTIFY_CLIENT = process.env.SPOTIFY_CLIENT
 const SPOTIFY_SECRET = process.env.SPOTIFY_SECRET
 
+console.log(process.env.HOME)
 module.exports = {
   MONGODB_URI,
   PORT,
