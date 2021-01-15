@@ -135,8 +135,8 @@ Project Link: [https://github.com/alexwang18/https://github.com/AlexWang18/Perso
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* CSS Template: [](https://github.com/lindelof)
-* Proton Library : [](https://github.com/drawcall/Proton)
+* [CSS Template](https://github.com/lindelof)
+* [Proton](https://github.com/drawcall/Proton)
 * []()
 
 
