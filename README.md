@@ -44,7 +44,7 @@
     <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website">View Demo</a>
+    <a href=https://alex-wang.herokuapp.com/>View Demo</a>
     ·
     <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website/issues">Report Bug</a>
     ·
@@ -85,7 +85,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://alex-wang.herokuapp.com/)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
