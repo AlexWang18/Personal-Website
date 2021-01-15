@@ -8,10 +8,11 @@ const cors = require('cors')
 const spotifyRouter = require('./controllers/spotify')
 
 const app = express()
+console.log('mode: ',process.env.NODE_ENV)
 
 const mongoose = require('mongoose')
-console.log(process.env.NODE_ENV)
-mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
+
+mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }) //undefined in prod mode
     .then(succ => {
         console.log('connected to MongoDB')
     })
