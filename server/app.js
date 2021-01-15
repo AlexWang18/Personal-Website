@@ -1,3 +1,4 @@
+require('dotenv').config()
 const config = require('./utils/config')
 const path = require('path');
 
