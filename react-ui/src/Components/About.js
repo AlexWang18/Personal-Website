@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = ({data}) => {
    const name = data.name
-   const profilepic = "build/images/"+"raven.jpg"
+   const profilepic = data.image
    const bio = data.bio
    const phone = data.phone
    const email = data.email
