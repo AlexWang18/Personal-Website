@@ -1,8 +1,4 @@
 
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** alexwang18, https://github.com/AlexWang18/Personal-Website, , alw245@pitt.edu, Portfolio Website, project_description
--->
 
 
 
