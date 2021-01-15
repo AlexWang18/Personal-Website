@@ -830,16 +830,15 @@ call-to-action .button {
    font: 15px/24px prima, 'opensans-bold';
    color: #EBEEEE;
    display: inline;
+
 }
 .spotifyplayer h6{
    font-size: medium;
 }
 .spotify-btn{ /* circle */
-   padding: 20px;
-   padding-bottom: 10px;
-   border-radius: 90%;        
+   padding: 25px 25px 25px 25px;
+   border-radius: 150%;        
    background-color: #1DB954 !important; 
-   
    text-align: center;
    vertical-align: center;
 }
