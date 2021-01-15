@@ -1,10 +1,4 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
+
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
 *** alexwang18, https://github.com/AlexWang18/Personal-Website, , alw245@pitt.edu, Portfolio Website, project_description
@@ -24,8 +18,8 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![MIT License][license-shield]][https://mit-license.org/]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alexwang18]
 
 
 
@@ -33,13 +27,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
-    project_description
+    This is my personal website, it was implemented using React, Node.js, and MongoDB. 
     <br />
     <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,7 +79,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://alex-wang.herokuapp.com/)
+[![Product Name Screen Shot][See the website here]](https://alex-wang.herokuapp.com/)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
