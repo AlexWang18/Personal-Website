@@ -18,13 +18,13 @@ class App extends Component {
       resumeData: {}
     };
 
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
+   // ReactGA.initialize('UA-110570651-1');
+    //ReactGA.pageview(window.location.pathname);
   }
 
   componentDidMount() {
     //loaded in
-    axios.get('http://localhost:3002/resume')
+    axios.get('/resume')
       .then(result => {
         this.setState({
           isLoaded: true,
