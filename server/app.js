@@ -27,7 +27,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 
-console.log('ok build not ignored')
+//front end not working
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('/api/spotify', spotifyRouter)
