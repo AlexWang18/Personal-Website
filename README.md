@@ -9,16 +9,16 @@
   <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
-    This is my personal website, it was implemented using React, Node.js, and MongoDB.  Find it here https://alex-wang.herokuapp.com/
+    This is my personal website, it was implemented using React, Node.js, and MongoDB.  
+  Find it here https://alex-wang.herokuapp.com/
     <br />
-    <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href=https://alex-wang.herokuapp.com/>View Demo</a>
     ·
-    <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website/issues">Report Bug</a>
+    <a href="https://github.com/AlexWang18/Personal-Website/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website/issues">Request Feature</a>
+    <a href="https://github.com/AlexWang18/Personal-Website/issues">Request Feature</a>
   </p>
 </p>
 
