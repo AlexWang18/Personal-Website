@@ -1,4 +1,5 @@
 require('dotenv').config()
+
 const config = require('./utils/config')
 const path = require('path');
 
@@ -7,6 +8,7 @@ const morgan = require('morgan')
 
 const cors = require('cors')
 const spotifyRouter = require('./controllers/spotify')
+
 
 const app = express()
 console.log('mode: ',process.env.NODE_ENV)
@@ -18,13 +20,14 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
         console.log('connected to MongoDB')
     })
     .catch(error => {
-        console.log('error connecting ', error.message)
+        console.log('error connecting to mongo ', error.message)
     })
 
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 
+console.log('ok build not ignored')
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('/api/spotify', spotifyRouter)
