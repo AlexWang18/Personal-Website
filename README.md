@@ -1,24 +1,4 @@
 
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][https://mit-license.org/]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alexwang18]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -29,7 +9,7 @@
   <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
-    This is my personal website, it was implemented using React, Node.js, and MongoDB. 
+    This is my personal website, it was implemented using React, Node.js, and MongoDB.  Find it here https://alex-wang.herokuapp.com/
     <br />
     <a href="https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website"><strong>Explore the docs »</strong></a>
     <br />
@@ -75,18 +55,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][See the website here]](https://alex-wang.herokuapp.com/)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`alexwang18`, `https://github.com/AlexWang18/Personal-Website`, `alw245@pitt.edu`, `Portfolio Website`, `A dynamic website to showcase my experience`
+[See the website here](https://alex-wang.herokuapp.com/)
 
 
 ### Built With
 
 * [React]()
+* [Proton Particles]()
 * [Express]()
 * [MongoDB]()
+* [Heroku]()
+
 
 
 
