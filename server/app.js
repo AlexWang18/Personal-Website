@@ -37,6 +37,15 @@ app.get('/resume', async (req, res) => {
     return res.json(resume)
 })
 
+app.get('/home', (req, res) => {
+    console.log('hello from backend')
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'))
+})
+
+app.get('/about', (req, res) => {
+    res.send('<h1>Hello World</h1>')
+})
+
 const Form = require('./models/form')
 app.post('/contact/api', (req, res) => {
     const body = req.body
