@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
         url = url.substring(1);
     res.sendFile(url);
 }); */
-// Error: ENOENT: no such file or directory, stat '/app/react-ui/build/index.html'
+
 app.get('/home', (req, res) => {
     console.log('hello from backend')
     res.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'))

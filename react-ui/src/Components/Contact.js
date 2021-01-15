@@ -12,7 +12,7 @@ const Contact = ({ data }) => {
    const phone = data.phone;
    const email = data.email;
    const contactMessage = data.contactmessage; 
-   const pic = data.endingpic
+   const pic = 'images/' + data.endingpic
    
    const [newName, setName] = useState('')
    const [newEmail, setEmail] = useState('')
