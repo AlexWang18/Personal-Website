@@ -9,6 +9,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const spotifyRouter = require('./controllers/spotify')
 
+
 const app = express()
 console.log('mode: ',process.env.NODE_ENV)
 
@@ -26,6 +27,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 
+console.log('ok build not ignored')
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('/api/spotify', spotifyRouter)
