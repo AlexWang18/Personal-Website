@@ -128,15 +128,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Alex Wang - [@](https://twitter.com/) - alw245@pitt.edu
 
-Project Link: [https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website](https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website)
+Project Link: [https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website](https://github.com/AlexWang18/Personal-Website)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [https://github.com/lindelof](CSS template)
-* []()
+* CSS Template: [](https://github.com/lindelof)
+* Proton Library : [](https://github.com/drawcall/Proton)
 * []()
 
 
