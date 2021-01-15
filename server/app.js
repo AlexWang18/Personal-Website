@@ -15,7 +15,7 @@ console.log('mode: ',process.env.NODE_ENV)
 
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }) //undefined in prod mode
+mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }) //undefined in prod mode
     .then(succ => {
         console.log('connected to MongoDB')
     })
