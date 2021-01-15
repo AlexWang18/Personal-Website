@@ -2,10 +2,10 @@
   "name": "personal-backend",
   "version": "0.0.1",
   "description": "using express and heroku and mongo",
-  "main": "/index.js",
+  "main": "/server/index.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
-    "dev": "NODE_ENV=development nodemon server",
+    "dev": "cross-env NODE_ENV=development nodemon server",
     "test": "NODE_ENV=test jest --verbose --runInBand"
   },
   "repository": {
@@ -23,12 +23,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "mongoose": "^5.11.11",
+    "mongoose": "^5.11.12",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0",
     "spotify-web-api-node": "^5.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.7"
   }
 }

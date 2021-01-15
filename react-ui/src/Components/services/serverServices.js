@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const baseUrl = 'http://localhost:3002'
+const baseUrl = ''
 
 const contactSubmit = (userObj) => { //forms
-    const request = axios.post(baseUrl + '/contact/api', userObj)
+    const request = axios.post('/contact/api', userObj)
 
     return request.then(res => res.data)
         .catch(err => console.log(err))
@@ -17,7 +17,7 @@ const getResume = () => {
 }
 
 const getSOTD = async() => { // song of the day
-    const res = await axios.get(baseUrl+'/api/spotify/sotd')
+    const res = await axios.get('/api/spotify/sotd')
     return res.data //the song
 }
 

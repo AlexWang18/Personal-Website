@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const config = require('./utils/config')
 const path = require('path');
 
@@ -7,22 +9,25 @@ const morgan = require('morgan')
 const cors = require('cors')
 const spotifyRouter = require('./controllers/spotify')
 
+
 const app = express()
+console.log('mode: ',process.env.NODE_ENV)
 
 const mongoose = require('mongoose')
-console.log(process.env.NODE_ENV)
-mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
+
+mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }) //undefined in prod mode
     .then(succ => {
         console.log('connected to MongoDB')
     })
     .catch(error => {
-        console.log('error connecting ', error.message)
+        console.log('error connecting to mongo ', error.message)
     })
 
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 
+//front end not working
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('/api/spotify', spotifyRouter)
@@ -30,6 +35,15 @@ app.use('/api/spotify', spotifyRouter)
 const resume = require('./resumeData.json')
 app.get('/resume', async (req, res) => {
     return res.json(resume)
+})
+
+app.get('/home', (req, res) => {
+    console.log('hello from backend')
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'))
+})
+
+app.get('/about', (req, res) => {
+    res.send('<h1>Hello World</h1>')
 })
 
 const Form = require('./models/form')
