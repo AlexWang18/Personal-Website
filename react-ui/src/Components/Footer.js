@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = ({ data }) => {
 
   const networks = data.social.map(n =>
-    <li key={n.name}><a href={n.url}><i className={n.className}></i></a></li>
+    <li key={n.name}><a target="_blank" rel="noopener noreferrer" href={n.url}><i className={n.className}></i></a></li>
   )
   return (
     <footer>

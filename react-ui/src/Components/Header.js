@@ -31,8 +31,8 @@ const Header = ({ data }) => {
                   <h3>{description}.</h3>
                   <hr />
                   <ul className="social">
-                     <span> <a href = {twitter} className="button btn twitter-btn"><i className="fa fa-twitter"></i>Twitter</a> </span>
-                     <li> <a href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a> </li>
+                     <span> <a target="_blank" rel="noopener noreferrer" href = {twitter} className="button btn twitter-btn"><i className="fa fa-twitter"></i>Twitter</a> </span>
+                     <li> <a target="_blank" rel="noopener noreferrer" href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a> </li>
                   </ul>
                </div>
             </div>

@@ -27,22 +27,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 
-//front end not working
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
-
-app.use('/api/spotify', spotifyRouter)
-
-const resume = require('./resumeData.json')
-app.get('/resume', async (req, res) => {
-    return res.json(resume)
-})
-/*
-app.get("/", (req, res) => {
-    let url = path.join(__dirname, '../react-ui/build', 'index.html');
-    if (!url.startsWith('/app/')) // since we're on local windows
-        url = url.substring(1);
-    res.sendFile(url);
-}); */
 
 app.get('/home', (req, res) => {
     console.log('hello from backend')
@@ -51,6 +36,14 @@ app.get('/home', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.send('<h1>Hello World</h1>')
+})
+
+
+app.use('/api/spotify', spotifyRouter)
+
+const resume = require('./resumeData.json')
+app.get('/resume', async (req, res) => {
+    return res.json(resume)
 })
 
 const Form = require('./models/form')
