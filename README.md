@@ -10,11 +10,11 @@
 
   <p align="center">
     This is my personal website, it was implemented using React, Node.js, and MongoDB.  
-  Find it here https://alex-wang.herokuapp.com/
+  Find it here alexwang.xyz
     <br />
     <br />
     <br />
-    <a href=https://alex-wang.herokuapp.com/>View Demo</a>
+    <a href=alexwang.xyz/>View Demo</a>
     ·
     <a href="https://github.com/AlexWang18/Personal-Website/issues">Report Bug</a>
     ·
