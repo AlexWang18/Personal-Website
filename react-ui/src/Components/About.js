@@ -6,7 +6,7 @@ const About = ({data}) => {
    const bio = data.bio
    const phone = data.phone
    const email = data.email
-   console.log(data.resumedownload)
+  
   /*  react-ui\build\Alex Wang Resume.docx */ 
    const resumeDownload = '/' + 'Alex Wang Resume.docx'
 
