@@ -10,7 +10,7 @@
 
   <p align="center">
     This is my personal website, it was implemented using React, Node.js, and MongoDB.  
-  Find it here alexwang.xyz
+  Find it here www.alexwang.xyz
     <br />
     <br />
     <br />
