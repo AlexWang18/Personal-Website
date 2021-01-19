@@ -246,11 +246,15 @@ ul#nav li.current a { color: #BB86FC; }
    margin-top: 6px;
    background: #444;
 }
+#about .download button{
+   color: #BB86FC;
+}
 #about .download .button:hover {
    background: #fff;
    color: #2B2B2B;
 }
 #about .download .button i {
+   color: #BB86FC;
    margin-right: 15px;
    font-size: 20px;
 }
