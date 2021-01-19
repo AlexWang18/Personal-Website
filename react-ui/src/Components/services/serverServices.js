@@ -9,9 +9,15 @@ const contactSubmit = (userObj) => { //forms
         .catch(err => console.log(err))
 }
 
-const getResume = () => {
-    const request = axios.get(baseUrl + '/resume')
+const getData = () => {
+    const request = axios.get(baseUrl + '/data')
 
+    return request.then(res => res.data)
+        .catch(err => console.log(err))
+}
+
+const getResume = () => {
+    const request = axios.get(baseUrl + '/download')
     return request.then(res => res.data)
         .catch(err => console.log(err))
 }
@@ -22,4 +28,4 @@ const getSOTD = async() => { // song of the day
 }
 
 
-export { contactSubmit, getResume, getSOTD }
+export { contactSubmit, getData, getResume, getSOTD }

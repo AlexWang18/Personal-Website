@@ -1,13 +1,16 @@
 import React from 'react';
 
-const About = ({data}) => {
+import download from 'downloadjs'
+import { getResume } from './services/serverServices'
+
+const About = ({ data }) => {
    const name = data.name
    const profilepic = 'images/' + data.image // not routing correctly if i include the /images in resumedata
    const bio = data.bio
    const phone = data.phone
    const email = data.email
-  
-  /*  react-ui\build\Alex Wang Resume.docx */ 
+
+   /*  react-ui\build\Alex Wang Resume.docx */
    const resumeDownload = '/' + 'Alex-Wang-Resume.docx'
 
    return (
@@ -30,10 +33,18 @@ const About = ({data}) => {
                            <span>{email}</span>
                         </p>
                      </div>
+
                      <div className="columns download">
-                        <p>
-                           <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
-                        </p>
+                        <button className="button"
+                           onClick={async () => {
+                              const blob = await getResume() //refactor currently not working with axios
+                            /*  const res = await fetch('/download');
+                              const blob = await res.blob(); */
+                              download(blob, 'AW Resume');
+                           }}>
+                              <i className="fa fa-download"></i>
+                              Download Resume
+                        </button>
                      </div>
                   </div>
                </div>

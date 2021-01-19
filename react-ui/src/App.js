@@ -24,7 +24,7 @@ class App extends Component {
 
   componentDidMount() {
     //loaded in
-    axios.get('/resume')
+    axios.get('/data')
       .then(result => {
         this.setState({
           isLoaded: true,

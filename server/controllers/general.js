@@ -8,13 +8,15 @@ router.get('/about', (req, res) => {
 })
 
 router.get('/download', (req, res) => {
-    res.download('./Alex-Wang-Resume.docx', 'resume', (err) => {
+    const file = `${__dirname}/../Alex-Wang-Resume.docx`
+    res.download(file, 'resume', (err) => {
+        console.log('here')
         if(err) console.log(err)
     })
 })
 
 const data = require('../resumeData.json')
-router.get('/resume', async (req, res) => {
+router.get('/data', async (req, res) => {
     return res.json(data)
 })
 
