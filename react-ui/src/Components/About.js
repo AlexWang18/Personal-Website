@@ -37,8 +37,8 @@ const About = ({ data }) => {
                      <div className="columns download">
                         <button className="button"
                            onClick={async () => {
-                              getResume().then(blob => {
-                                 download(blob, 'AW Resume')
+                              getResume().then(file => {
+                                 download(file, 'AW Resume')
                               })
                            }}>
                            <i className="fa fa-download"></i>
