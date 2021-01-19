@@ -28,12 +28,13 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
-app.use(helmet({
+/*app.use(helmet({
+    contentSecurityPolicy: false,
     directives: {
         "default-src": helmet.contentSecurityPolicy.dangerouslyDisableDefaultSrc,
         "worker-src": ["'self'"],
         upgradeInsecureRequests: [], }
-    }))
+    })) */
 
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
