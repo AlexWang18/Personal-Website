@@ -34,11 +34,11 @@ app.use(helmet({
         "worker-src": ["'self'"],
         upgradeInsecureRequests: [], }
     }))
-console.log(helmet.contentSecurityPolicy.getDefaultDirectives())
 
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('', generalRouter)
 app.use('/api/spotify', spotifyRouter)
 
+//need to add unknown endpoint middleware
 module.exports = app
