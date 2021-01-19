@@ -55,7 +55,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[See the website here](https://alex-wang.herokuapp.com/)
+[See the website here](https://alexwang.xyz)
 
 
 ### Built With
@@ -73,6 +73,53 @@
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
+Fork the project here https://github.com/AlexWang18/Personal-Website.git
+
+### Run the API server
+
+In a terminal:
+
+```bash
+# Initial setup
+npm install
+
+# Start the server
+npm start
+```
+
+#### Install new npm packages for Node
+
+```bash
+npm install package-name --save
+```
+
+
+### Run the React UI
+
+The React app is configured to proxy backend requests to the local Node server. (See [`"proxy"` config](react-ui/package.json))
+
+In a separate terminal from the API server, start the UI:
+
+```bash
+# Always change directory, first
+cd react-ui/
+
+# Initial setup
+npm install
+
+# Start the server
+npm start
+```
+
+#### Install new npm packages for React UI
+
+```bash
+# Always change directory, first
+cd react-ui/
+
+npm install package-name --save
+```
+
 
 ### Prerequisites
 
@@ -154,6 +201,6 @@ Project Link: [https://github.com/alexwang18/https://github.com/AlexWang18/Perso
 [issues-shield]: https://img.shields.io/github/issues/alexwang18/repo.svg?style=for-the-badge
 [issues-url]: https://github.com/alexwang18/repo/issues
 [license-shield]: https://img.shields.io/github/license/alexwang18/repo.svg?style=for-the-badge
-[license-url]: https://github.com/alexwang18/repo/blob/master/LICENSE.txt
+[license-url]: https://mit-license.org/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alexwang18
