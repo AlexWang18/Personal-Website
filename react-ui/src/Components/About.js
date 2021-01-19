@@ -37,12 +37,11 @@ const About = ({ data }) => {
                      <div className="columns download">
                         <button className="button"
                            onClick={async () => {
-                              const blob = await getResume() //refactor currently not working with axios
-                            /*  const res = await fetch('/download');
-                              const blob = await res.blob(); */
-                              download(blob, 'AW Resume');
+                              getResume().then(blob => {
+                                 download(blob, 'AW Resume')
+                              })
                            }}>
-                              <i className="fa fa-download"></i>
+                           <i className="fa fa-download"></i>
                               Download Resume
                         </button>
                      </div>
