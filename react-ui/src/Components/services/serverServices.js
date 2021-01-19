@@ -30,9 +30,9 @@ const getResume = async () => {
 const getSOTD = async() => { // song of the day
     try{
         const res = await axios.get('/api/spotify/sotd')
-        return res.data //the song
+        return res.data //the actual song resouce
     }
-    catch(e){ //can i use express async errors in a chrome browser app
+    catch(e){ 
         console.log(e)
     }
 }

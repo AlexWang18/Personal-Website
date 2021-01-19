@@ -10,7 +10,6 @@ router.get('/about', (req, res) => {
 router.get('/download', (req, res) => {
     const file = `${__dirname}/../Alex-Wang-Resume.docx`
     res.download(file, 'resume', (err) => {
-        console.log('here')
         if(err) console.log(err)
     })
 })

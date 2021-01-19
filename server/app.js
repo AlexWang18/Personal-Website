@@ -4,9 +4,8 @@ const config = require('./utils/config')
 const path = require('path');
 
 const express = require('express')
-const morgan = require('morgan')
-const helmet = require('helmet')
 
+const middleware = require('./utils/middleware')
 
 const cors = require('cors')
 const spotifyRouter = require('./controllers/spotify')
@@ -26,20 +25,18 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
     })
 
 app.use(express.json())
-app.use(morgan('tiny'))
 app.use(cors())
-/*app.use(helmet({
-    contentSecurityPolicy: false,
-    directives: {
-        "default-src": helmet.contentSecurityPolicy.dangerouslyDisableDefaultSrc,
-        "worker-src": ["'self'"],
-        upgradeInsecureRequests: [], }
-    })) */
+
+app.use(middleware.morganLogger)
+
 
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
 app.use('', generalRouter)
 app.use('/api/spotify', spotifyRouter)
 
-//need to add unknown endpoint middleware
+
+app.use(middleware.unknownEndpoint)
+app.use(middleware.errorHandler)
+
 module.exports = app
