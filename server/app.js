@@ -29,6 +29,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
 app.use(helmet({
+    contentSecurityPolicy: false,
     directives: {
         "default-src": helmet.contentSecurityPolicy.dangerouslyDisableDefaultSrc,
         "worker-src": ["'self'"],
