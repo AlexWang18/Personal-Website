@@ -55,6 +55,7 @@ router.get('/sotd', async (req, res) => {
   const songs = await Song.find({})
   res.json(songs[day])
 })
+
 router.get('/', async (req, res) => {
   const songs = await Song.find({})
   res.json(songs)

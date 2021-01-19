@@ -8,7 +8,7 @@ const About = ({data}) => {
    const email = data.email
   
   /*  react-ui\build\Alex Wang Resume.docx */ 
-   const resumeDownload = '/' + 'Alex Wang Resume.docx'
+   const resumeDownload = '/' + 'Alex-Wang-Resume.docx'
 
    return (
       <div className="about">
