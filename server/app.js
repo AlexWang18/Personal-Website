@@ -5,6 +5,7 @@ const path = require('path');
 
 const express = require('express')
 const morgan = require('morgan')
+const helmet = require('helmet')
 
 const cors = require('cors')
 const spotifyRouter = require('./controllers/spotify')
@@ -26,6 +27,7 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
+app.use(helmet())
 
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
