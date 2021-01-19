@@ -3,7 +3,7 @@ import React from 'react';
 const Project = ({ p }) => {
   const projectImage = 'images/portfolio/' + p.image;
   return (
-    <div key={p.title} className="columns portfolio-item">
+    <div key={p.title+'17'} className="columns portfolio-item">
       <div className="item-wrap">
         <a href={p.url} title={p.title}>
          <img alt={p.title} src={projectImage} />
