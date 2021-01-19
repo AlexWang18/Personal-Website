@@ -13,7 +13,7 @@
       "project":"https://github.com/AlexWang18/Personal-Website",
       "twitter":"http://twitter.com/AlexunderWang",
       "website": "alexwang18.github.io",
-      "resumedownload":"Alex Wang Resume.docx",
+      "resumedownload":"Alex-Wang-Resume.docx",
       "endingpic" : "snowbody.JPG",
       "social":[
         {
@@ -45,7 +45,7 @@
           "school":"University of Pittsburgh",
           "degree":"Computer Science",
           "graduated":"2024",
-          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, Open Source, game theory, and HCI."
+          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, computer ethics, game theory, and HCI."
         }
       ],
       "work":[

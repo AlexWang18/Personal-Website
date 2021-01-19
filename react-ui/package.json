@@ -5,6 +5,7 @@
   "dependencies": {
     "anix": "^0.3.3",
     "axios": "^0.21.1",
+    "downloadjs": "^1.4.7",
     "install": "^0.13.0",
     "jquery": "^3.2.1",
     "manager": "^1.0.9",
@@ -26,5 +27,4 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3002"
-  
 }
