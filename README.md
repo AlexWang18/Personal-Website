@@ -56,7 +56,7 @@
 ## About The Project
 
 [See the website here](https://alexwang.xyz)
-
+I deployed the Node app via Heroku using the free dyno tier. I then set up a domain purchased via GoDaddy to link back to the Heroku's supplied target. Afterwards I used Cloudlflare's free plan to enable only SSL/TLS requests to further secure my website.
 
 ### Built With
 
