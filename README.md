@@ -10,7 +10,7 @@
 
   <p align="center">
     This is my personal website, it was implemented using React, Node.js, and MongoDB.  
-  Find it here www.alexwang.xyz or alternatively at http://hi.alexwang.tech
+  Find it here https://alexwang.xyz or alternatively at http://hi.alexwang.tech
     <br />
     <br />
     <br />
@@ -55,7 +55,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[See the website here](https://alexwang.xyz)
+[See the website here](https://alexwang.xyz)  
+
 I deployed the Node app via Heroku using the free dyno tier. I then set up a domain purchased via GoDaddy to link back to the Heroku's supplied target. Afterwards I used Cloudlflare's free plan to enable only SSL/TLS requests to further secure my website.
 
 ### Built With
@@ -73,7 +74,7 @@ I deployed the Node app via Heroku using the free dyno tier. I then set up a dom
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-Fork the project here https://github.com/AlexWang18/Personal-Website.git
+Fork the here https://github.com/AlexWang18/Personal-Website.git
 
 ### Run the API server
 
@@ -173,9 +174,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Alex Wang - [@](https://twitter.com/) - alw245@pitt.edu
+Alex Wang - [@](https://twitter.com/AlexunderWang) - alw245@pitt.edu
 
-Project Link: [https://github.com/alexwang18/https://github.com/AlexWang18/Personal-Website](https://github.com/AlexWang18/Personal-Website)
+Project Link: [https://github.com/AlexWang18/Personal-Website](https://github.com/AlexWang18/Personal-Website)
 
 
 
