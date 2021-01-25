@@ -7,7 +7,8 @@
     "start": "NODE_ENV=production node server",
     "dev": "cross-env NODE_ENV=development nodemon server",
     "test": "NODE_ENV=test jest --verbose --runInBand",
-    "build": "cd react-ui/ && npm install && npm run build"
+    "build": "cd react-ui/ && npm install && npm run build",
+    "deploy": "git push heroku HEAD:main"
   },
   "repository": {
     "type": "git",

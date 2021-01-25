@@ -5,24 +5,20 @@ import { contactSubmit } from './services/serverServices'
 import { getSOTD } from './services/serverServices'
 
 const Contact = ({ data }) => {
-   //if(data) getLatest()
+  
    const name = data.name;
    const city = data.city;
    const state = data.state;
    const phone = data.phone;
    const email = data.email;
-   const contactMessage = data.contactmessage; 
+   const contactMessage = data.contactmessage;
    const pic = 'images/' + data.endingpic
-   
+
    const [newName, setName] = useState('')
    const [newEmail, setEmail] = useState('')
+   const [newSubject, setSubject] = useState('')
    const [newMessage, setMessage] = useState('')
 
-   const resetForm = () => {
-      setName('')
-      setEmail('')
-      setMessage('')
-   }
 
    const handleSubmit = (e) => {
       e.preventDefault()
@@ -30,12 +26,19 @@ const Contact = ({ data }) => {
       const userData = {
          name: newName,
          email: newEmail,
+         subject: newSubject,
          message: newMessage
       }
-
+      
+      const resetForm = () => {
+         setName('')
+         setEmail('')
+         setSubject('')
+         setMessage('')
+      }
       contactSubmit(userData)
-         .then(data => {
-            console.log('success submitting data', data);
+         .then(d => {
+            console.log('success submitting data', d);
             resetForm()
          })
    }
@@ -47,21 +50,25 @@ const Contact = ({ data }) => {
       //if matches regex
       setEmail(event.target.value)
    }
+   const handleSubjectChange = (event) => {
+      setSubject(event.target.value)
+   }
    const handleMessageChange = (event) => {
       setMessage(event.target.value)
    }
-   const [song, setSong] = useState(null)
 
-  useEffect(() => {
-    const fetch = async () => {
-      const songOTD = await getSOTD()
-      setSong(songOTD)
-    }
-    fetch()
-  }, [])
-  if (song === null) {
-    return <h1>Loading...</h1>
-  }
+   const [song, setSong] = useState(null)
+   useEffect(() => {
+      const fetch = async () => {
+         const songOTD = await getSOTD()
+         setSong(songOTD)
+      }
+      fetch()
+   }, [])
+
+   if (song === null) {
+      return <h1>Loading...</h1>
+   }
    return (
       <section id="contact">
 
@@ -99,12 +106,12 @@ const Contact = ({ data }) => {
 
                      <div>
                         <label htmlFor="contactSubject">Subject</label>
-                        <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={handleMessageChange} />
+                        <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={handleSubjectChange} />
                      </div>
 
                      <div>
                         <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                        <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                        <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" onChange={handleMessageChange}></textarea>
                      </div>
 
                      <div>
@@ -128,21 +135,21 @@ const Contact = ({ data }) => {
 
                   <h4>Contact Info</h4>
                   <p className="address">
-                     {name} 
-                     <br/>
+                     {name}
+                     <br />
                      {email}
-                     <br/>
+                     <br />
                      {city}, {state} <br />
                      <span>{phone}</span>
                   </p>
                </div>
                <div>
-               <img src= {pic} alt = "closing portrait" width = "200" height = "200"></img>
+                  <img src={pic} alt="closing portrait" width="200" height="200"></img>
                </div>
-               <div className = "spotifyplayer">
-            <a href={song.url} target="_blank" rel="noopener noreferrer" className="button btn spotify-btn"><i><img className="spotifypic" alt = "album art" src={song.image} width="100" height="100"></img></i>
-              <h6>Song of the day: </h6> <p>{song.name} - {song.artist}</p></a>
-          </div>
+               <div className="spotifyplayer">
+                  <a href={song.url} target="_blank" rel="noopener noreferrer" className="button btn spotify-btn"><i><img className="spotifypic" alt="album art" src={song.image} width="100" height="100"></img></i>
+                     <h6>Song of the day: </h6> <p>{song.name} - {song.artist}</p></a>
+               </div>
             </aside>
          </div>
       </section>
