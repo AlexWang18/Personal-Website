@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { contactSubmit } from './services/serverServices'
 
-import { getSOTD } from './services/serverServices'
-
 const Contact = ({ data }) => {
-  
+
    const name = data.name;
    const city = data.city;
    const state = data.state;
@@ -29,7 +27,7 @@ const Contact = ({ data }) => {
          subject: newSubject,
          message: newMessage
       }
-      
+
       const resetForm = () => {
          setName('')
          setEmail('')
@@ -56,19 +54,8 @@ const Contact = ({ data }) => {
    const handleMessageChange = (event) => {
       setMessage(event.target.value)
    }
+  
 
-   const [song, setSong] = useState(null)
-   useEffect(() => {
-      const fetch = async () => {
-         const songOTD = await getSOTD()
-         setSong(songOTD)
-      }
-      fetch()
-   }, [])
-
-   if (song === null) {
-      return <h1>Loading...</h1>
-   }
    return (
       <section id="contact">
 
@@ -143,12 +130,9 @@ const Contact = ({ data }) => {
                      <span>{phone}</span>
                   </p>
                </div>
+
                <div>
                   <img src={pic} alt="closing portrait" width="200" height="200"></img>
-               </div>
-               <div className="spotifyplayer">
-                  <a href={song.url} target="_blank" rel="noopener noreferrer" className="button btn spotify-btn"><i><img className="spotifypic" alt="album art" src={song.image} width="100" height="100"></img></i>
-                     <h6>Song of the day: </h6> <p>{song.name} - {song.artist}</p></a>
                </div>
             </aside>
          </div>
