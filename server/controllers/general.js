@@ -8,7 +8,7 @@ router.get('/about', (req, res) => {
 })
 
 router.get('/download', (req, res) => {
-    const file = `${__dirname}/../AW-Resume.docx`
+    const file = `${__dirname}/../AWResume.pdf`
     res.download(file, 'resume', (err) => {
         if(err) console.log(err)
     })
@@ -19,14 +19,14 @@ router.get('/data', async (req, res) => {
     return res.json(data)
 })
 
-const Form = require('../models/form')
-router.post('/contact/api', (req, res) => {
+const Form = require('../models/form') 
+router.post('/contact', (req, res) => { // handle form requests and save them into Mongo
     const body = req.body
 
     const form = {
         ...body
     }
-    Form.create(form) //could also use the async await syntax but would have to install express async errors lib
+    Form.create(form) 
         .then(savedForm => {
             console.log(`Saved the form from ${form.name}`)
             res.json(savedForm)
@@ -35,12 +35,13 @@ router.post('/contact/api', (req, res) => {
 
 })
 
+/* probably do not want this public
 router.get('/api', (req, res) => {
     Form.find({})
         .then(forms => {
             res.json(forms)
         })
         .catch(err => console.log(err))
-})
+}) */
 
 module.exports = router;
