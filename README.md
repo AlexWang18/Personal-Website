@@ -146,7 +146,8 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use this however you like. A quick way to make it your own is to edit the ResumeData.json file in the server folder to change it to your information. To upload your own images delete the current ones in the react-ui/public/images folder and place your own. However if you change the skills data in the .json, be sure to update the layout.css file with the appropriate skills that match so that the animation will work.   
+To deploy visit the [Heroku Docs](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true) to learn more. 
 
 
 
@@ -185,7 +186,7 @@ Project Link: [https://github.com/AlexWang18/Personal-Website](https://github.co
 
 * [CSS Template](https://github.com/lindelof)
 * [Proton](https://github.com/drawcall/Proton)
-* []()
+* [Spotify Widget](https://www.npmjs.com/package/react-spotify-player)
 
 
 
