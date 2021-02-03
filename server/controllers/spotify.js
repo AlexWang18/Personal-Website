@@ -14,13 +14,12 @@ const spotify = new spotifyWebApi({
   clientSecret: secret
 })
 
-
 const initSongs = async () => {
   spotify.clientCredentialsGrant().then(
     function (data) {
       console.log('The access token expires in ' + data.body['expires_in']);
       console.log('The access token is ' + data.body['access_token']);
-  
+
       // Save the access token so that it's used in future calls
       spotify.setAccessToken(data.body['access_token']);
     },
@@ -29,8 +28,8 @@ const initSongs = async () => {
     }
   );
   spotify.setAccessToken('BQB62QuckE5YXS-zui7CZykLRIgT1_c-XQ0OLYyFW56ZY2Eyc8xSzb8y7kXzgET6UQYIaMEOuDQImoQLVBg')
-  
-  await spotify.getPlaylistTracks('17ikjm0CJRR1vTFXovJ1BS').then(data => { //first 100 of bop
+
+  await spotify.getPlaylistTracks('17ikjm0CJRR1vTFXovJ1BS').then(data => { //first 100 songs of playlist
     Song.deleteMany({})
     data.body.items.forEach(s => {
       Song.create(
@@ -46,11 +45,11 @@ const initSongs = async () => {
   })
 }
 
-const starterDate = '2021-01-13T18:34:13.472043' //hard code in for now
+const starterDate = '2021-01-13T18:34:13.472043' // hard code in for now
 
 router.get('/sotd', async (req, res) => {
   const date = new Date().toISOString()
-  const day = parseInt(date.substring(8,10)) - parseInt(starterDate.substring(8,10))
+  const day = parseInt(date.substring(8, 10)) - parseInt(starterDate.substring(8, 10))
 
   const songs = await Song.find({})
   res.json(songs[day])
@@ -67,10 +66,6 @@ router.get('/:id', async (req, res) => {
   const songs = await Song.find({})
   res.json(songs[id])
 })
-
-
-//spotify.getUser('5516771eusq1gh498gt0dxuel').then(res => console.log(res))
-
 
 
 module.exports = router

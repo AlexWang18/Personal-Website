@@ -35,7 +35,7 @@ app.get('/', (req,res) => {
 
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
 
-app.use('', generalRouter)
+app.use('/', generalRouter)
 app.use('/api/spotify', spotifyRouter)
 
 
