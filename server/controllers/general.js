@@ -8,7 +8,7 @@ router.get('/about', (req, res) => {
 })
 
 router.get('/download', (req, res) => {
-    const file = `${__dirname}/../AWResume.pdf`
+    const file = `${__dirname}/../AlexWangResume.pdf`
     res.download(file, 'resume', (err) => {
         if(err) console.log(err)
     })
