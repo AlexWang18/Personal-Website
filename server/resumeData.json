@@ -45,10 +45,16 @@
           "school":"University of Pittsburgh",
           "degree":"Computer Science",
           "graduated":"2024",
-          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, computer ethics, game theory, and HCI."
+          "description":"Current first year student at the school of Computing and Information. Some topics I'm interested in include blockchain, machine learning, game theory, and HCI."
         }
       ],
       "work":[
+        {
+          "company": "Building New Hope",
+          "title":"Software Developer",
+          "years": "January 2021 - April 2021",
+          "description":"Created an eCommerce mobile app for a nonprofit coffee company under the PittServes program. Communicated closely with the client to match specifications. Utilized React Native and the Paypal API for a clean and secure user experience."
+          },
         {
         "company": "Fortnite",
         "title":"Pro Player",
@@ -63,11 +69,11 @@
         },
         {
           "name":"nodejs",
-          "level":"55%"
+          "level":"65%"
         },
         {
           "name":"ReactJs",
-          "level":"50%"
+          "level":"70%"
         },
         {
           "name":"JSHTMLCSS",
@@ -79,7 +85,7 @@
         },
         {
           "name":"Git",
-          "level":"60%"
+          "level":"70%"
         },{
           "name":"MongoDB",
           "level":"40%"
@@ -89,34 +95,33 @@
     "portfolio":{
       "projects": [
         {
+          "title":"Resu.Me",
+          "category":"Developed the REST API with Express for the mobile and web application that won the Steelhacks 2021 beginner track. Also worked on the website's frontend making sure it seemlessly integrated with the API properly. ",
+          "image":"resu.me.png",
+          "icon":"fas fa-phone fa-3x",
+          "url":"https://github.com/AlexWang18/Steelhacks"
+        },
+        {
+          "title":"Building New Hope App",
+          "category":"Created an eCommerce mobile application for a nonprofit coffee company with React Native and the Expo framework. Included features such as tab based navigation, splash screen, modal view, and checkout via the Paypal API.",
+          "image":"bnh_1_2000x1200.jpg",
+          "icon":"fas fa-twitter fa-3x",
+          "url":"https://github.com/Building-New-Hope/MobileApp"
+        },
+        {
           "title":"Chess",
-          "category":"This was my first project I completed shortly after my first semester. I used Maven and Java OOP design patterns to create a fully functional Chess emulator on the command line.",
-          "image":"wp3269688.png",
+          "category":"This was my first project I completed shortly after my first semester. I utilized Maven and Java OOP design patterns to create a fully functional Chess emulator on the command line.",
+          "image":"chess.png",
           "icon":"fas fa-chess fa-3x",
           "url":"https://github.com/AlexWang18/Chess"
         },
         {
           "title":"Phonebook",
-          "category":"A simple website I made using React, Express, and MongoDB. It allows users to provide their credentials and will store only the validated phone numbers. It also has filtering for parsing through a larger set of people",
+          "category":"A CRUD web application I made using React, Express, and MongoDB. It allows users to provide their credentials and will store only the validated phone numbers. Implemented filtering for parsing through a larger set of people",
           "image":"iphone.jpg",
           "icon":"fas fa-phone fa-3x",
           "url":"https://github.com/AlexWang18/Phonebook"
-        },
-        {
-          "title":"Twitter Bot",
-          "category":"This was mostly a for leisure project where I made a bot that could automatically reply to tweets matching queries and also store those tweets into a text file",
-          "image":"twitterdark.jpg",
-          "icon":"fas fa-twitter fa-3x",
-          "url":"https://developer.twitter.com/en/docs/getting-started"
-        },
-        {
-          "title":"To be added",
-          "category":"",
-          "image":"external-content.duckduckgo.com.jpg",
-          "icon":"fas fa-question-circle fa-3x",
-          "url":""
         }
-        
       ]
     }
   }
